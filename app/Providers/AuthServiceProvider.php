@@ -13,7 +13,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Model' => 'App\Policies\ModelPolicy',
+        \App\Models\Topic::class => \App\Policies\TopicPolicy::class,
+        \App\Models\User::class => \App\Policies\UserPolicy::class,
     ];
 
     /**
@@ -27,8 +28,8 @@ class AuthServiceProvider extends ServiceProvider
 
         // 修改策略自动发现的逻辑
         // 动态返回模型对应的策略名称，如：'App\Model\User' => 'App\Policies\UserPolicy',
-        Gate::guessPolicyNamesUsing(function ($modelClass) {
-            return 'App\Policies\\'.class_basename($modelClass).'Policy';
-        });
+        // Gate::guessPolicyNamesUsing(function ($modelClass) {
+        //     return 'App\Policies\\'.class_basename($modelClass).'Policy';
+        // });
     }
 }
