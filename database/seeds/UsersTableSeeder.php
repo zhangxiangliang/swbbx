@@ -16,10 +16,7 @@ class UsersTableSeeder extends Seeder
         $faker = app(Faker\Generator::class);
 
         // 生成数据集合
-        $users = factory(User::class)->times(10)->make()->each(function ($user) {
-            // 从头像数组中随机取出一个并赋值
-            $user->avatar = 'https://cdn.learnku.com/uploads/avatars/45055_1563272304.jpeg';
-        });
+        $users = factory(User::class)->times(10)->make();
 
         // 让隐藏字段可见，并将数据集合转换为数组
         $users = $users->makeVisible(['password', 'remember_token'])->toArray();
