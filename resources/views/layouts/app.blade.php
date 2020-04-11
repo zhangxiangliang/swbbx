@@ -10,6 +10,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', '神武百宝箱') | 神武百宝箱</title>
+  <meta name="description" content="@yield('description', '神武百宝箱')" />
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
