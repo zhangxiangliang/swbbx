@@ -20,7 +20,14 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
+
+            // 用户数据
+            $table->string('avatar')->nullable();
+            $table->string('introduction')->nullable();
+
+            // 时间线
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
