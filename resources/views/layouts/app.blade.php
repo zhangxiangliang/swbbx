@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>神武百宝箱 - @yield('title', '一起闯荡神武世界')</title>
+  <title>@yield('title', '神武百宝箱') | 神武百宝箱</title>
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">

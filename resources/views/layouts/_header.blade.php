@@ -13,7 +13,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto">
-
+        {{ Route::currentRouteName() }}
+        <li class="nav-item {{request()->is('topics') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('topics.index') }}">话题</a>
+        </li>
+        <li class="nav-item {{request()->is('categories/1') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('categories.show', 1) }}">分享</a>
+        </li>
+        <li class="nav-item {{request()->is('categories/2') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('categories.show', 2) }}">教程</a>
+        </li>
+        <li class="nav-item {{request()->is('categories/3') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('categories.show', 3) }}">问答</a>
+        </li>
+        <li class="nav-item {{request()->is('categories/4') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('categories.show', 4) }}">公告</a>
+        </li>
       </ul>
 
       <!-- Right Side Of Navbar -->
