@@ -14,10 +14,12 @@
         "guzzlehttp/guzzle": "^6.5",
         "intervention/image": "^2.5",
         "laravel/framework": "^7.0",
+        "laravel/horizon": "^4.2",
         "laravel/tinker": "^2.0",
         "mews/purifier": "^3.2",
         "overtrue/laravel-lang": "^3.0",
-        "overtrue/pinyin": "^4.0"
+        "overtrue/pinyin": "^4.0",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
