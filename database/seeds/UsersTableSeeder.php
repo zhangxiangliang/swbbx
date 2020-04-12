@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,24 +13,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        // 获取 Faker 实例
-        $faker = app(Faker\Generator::class);
-
-        // 生成数据集合
-        $users = factory(User::class)->times(10)->make();
-
-        // 让隐藏字段可见，并将数据集合转换为数组
-        $users = $users->makeVisible(['password', 'remember_token'])->toArray();
-
-        // 插入到数据库中
-        User::insert($users);
-
-        // 单独处理第一个用户的数据
-        $user = User::find(1);
-        $user->name = '张小二';
-        $user->email = 'admin@pushme.top';
-        $user->avatar = 'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png';
-        $user->save();
+        // 创建管理员
+        $user = User::create([
+            'name' => '張小二',
+            'email' => 'admin@pushme.top',
+            'password' => Hash::make(env('USER_PASSWORD', '123456')),
+            'avatar' => config('app.url'). "/images/avatar/base.jpg",
+            'introduction' => '神武百宝箱站长'
+        ]);
     }
 }
 
