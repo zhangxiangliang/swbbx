@@ -35,9 +35,11 @@
         {{-- 话题列表 --}}
         @include('topics._topic_list', ['topics' => $topics])
         {{-- 分页 --}}
+        @if($topics->lastPage() > 1)
         <div class="mt-5">
           {!! $topics->appends(Request::except('page'))->render() !!}
         </div>
+        @endif
       </div>
     </div>
   </div>

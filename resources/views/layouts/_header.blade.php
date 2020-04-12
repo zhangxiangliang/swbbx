@@ -14,19 +14,10 @@
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item {{request()->is('topics') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('topics.index') }}">话题</a>
+          <a class="nav-link" href="{{ route('topics.index') }}">首页</a>
         </li>
         <li class="nav-item {{request()->is('categories/1') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('categories.show', 1) }}">分享</a>
-        </li>
-        <li class="nav-item {{request()->is('categories/2') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('categories.show', 2) }}">教程</a>
-        </li>
-        <li class="nav-item {{request()->is('categories/3') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('categories.show', 3) }}">问答</a>
-        </li>
-        <li class="nav-item {{request()->is('categories/4') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('categories.show', 4) }}">公告</a>
+          <a class="nav-link" href="{{ route('categories.show', 1) }}">公告</a>
         </li>
       </ul>
 
@@ -35,7 +26,6 @@
         <!-- Authentication Links -->
         @guest
         <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
         @else
         <li class="nav-item">
           <a class="nav-link mt-1 mr-3 font-weight-bold" href="{{ route('topics.create') }}">
