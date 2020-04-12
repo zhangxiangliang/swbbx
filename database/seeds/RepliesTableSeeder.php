@@ -7,13 +7,12 @@ class RepliesTableSeeder extends Seeder
 {
     public function run()
     {
-        $replies = factory(Reply::class)->times(50)->make()->each(function ($reply, $index) {
-            if ($index == 0) {
-                // $reply->field = 'value';
-            }
-        });
-
-        Reply::insert($replies->toArray());
+        // 创建默认回复
+        Reply::create([
+            'user_id' => 1,
+            'topic_id' => 1,
+            'content' => '招待不周~'
+        ]);
     }
 
 }
