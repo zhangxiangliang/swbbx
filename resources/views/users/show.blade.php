@@ -21,7 +21,8 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt-md-0 mt-sm-2">
     <div class="card ">
       <div class="card-body">
         <h1 class="mb-0" style="font-size:22px;">{{ $user->name }}</h1>

@@ -13,7 +13,6 @@
     @endif
 
     <div class="card">
-
       <div class="card-header bg-transparent">
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -44,7 +43,7 @@
     </div>
   </div>
 
-  <div class="col-lg-3 col-md-3 sidebar">
+  <div class="col-lg-3 col-md-3 sidebar mt-md-0 mt-sm-2">
     @include('topics._sidebar')
   </div>
 </div>

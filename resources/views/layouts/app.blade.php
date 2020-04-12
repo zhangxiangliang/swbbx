@@ -11,6 +11,7 @@
 
   <title>@yield('title', '神武百宝箱') | 神武百宝箱</title>
   <meta name="description" content="@yield('description', '神武百宝箱')" />
+  <meta name="keyword" content="@yield('keyword', '神武百宝箱')" />
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -36,7 +37,6 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
-
   @yield('scripts')
 
 </body>
