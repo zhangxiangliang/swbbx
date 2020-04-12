@@ -14,19 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'TopicsController@index')->name('index');
+Route::group(['namespace' => 'Web'], function () {
+    Route::get('/', 'TopicsController@index')->name('index');
 
-// 用户身份验证相关的路由
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    // 用户身份验证相关的路由
+    Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+    Route::post('login', 'Auth\LoginController@login');
+    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-// 相关路由
-Route::resource('replies', 'RepliesController', ['only' => ['store']]);
-Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
-Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+    // 相关路由
+    Route::resource('replies', 'RepliesController', ['only' => ['store']]);
+    Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+    Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
-// 话题相关路由
-Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
-Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
-Route::post('topics/upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+    // 话题相关路由
+    Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
+    Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
+    Route::post('topics/upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+});
