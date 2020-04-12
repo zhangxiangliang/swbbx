@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item {{request()->is('topics') ? 'active': ''}}">
+        <li class="nav-item {{request()->is('topics') || request()->is('/') ? 'active': ''}}">
           <a class="nav-link" href="{{ route('topics.index') }}">首页</a>
         </li>
         <li class="nav-item {{request()->is('categories/1') ? 'active': ''}}">
