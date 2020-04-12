@@ -406,3 +406,14 @@
     content: normal;
   }
 }
+
+.topic-reply {
+  a {
+    color: inherit;
+  }
+
+  .meta {
+    font-size: .9em;
+    color: #b3b3b3;
+  }
+}

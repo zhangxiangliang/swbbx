@@ -19,6 +19,8 @@
 @endif
 
 {{-- 分页 --}}
+@if($topics->lastPage() > 1)
 <div class="mt-4 pt-1">
   {!! $topics->render() !!}
 </div>
+@endif
