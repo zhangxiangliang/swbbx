@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reply;
 use App\Models\Topic;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -33,7 +34,9 @@ class TopicsController extends Controller
             return redirect($topic->link(), 301);
         }
 
-        return view('topics.show', compact('topic'));
+        $replies = Reply::where('topic_id', $topic->id)->paginate();
+
+        return view('topics.show', compact('topic', 'replies'));
     }
 
     public function create(Topic $topic)

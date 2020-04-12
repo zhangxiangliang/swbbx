@@ -13,6 +13,12 @@ class RepliesTableSeeder extends Seeder
             'topic_id' => 1,
             'content' => '招待不周~'
         ]);
+
+        Reply::create([
+            'user_id' => 2,
+            'topic_id' => 1,
+            'content' => '大家好~我是神武百宝箱新进【酱油队队长】'
+        ]);
     }
 
 }
