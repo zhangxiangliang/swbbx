@@ -27,7 +27,7 @@ Route::group(['namespace' => 'Web'], function () {
     Route::resource('replies', 'RepliesController', ['only' => ['store']]);
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
     Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
-    Route::resource('questions', 'QuestionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+    Route::resource('questions', 'QuestionsController', ['only' => ['index']]);
 
     // 话题相关路由
     Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
