@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Web;
 use App\Models\Reply;
 use Illuminate\Http\Request;
 use App\Http\Requests\ReplyRequest;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class RepliesController extends Controller

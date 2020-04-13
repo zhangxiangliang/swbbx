@@ -8,7 +8,6 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\TopicRequest;
 use App\Handlers\ImageUploadHandler;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class TopicsController extends Controller
