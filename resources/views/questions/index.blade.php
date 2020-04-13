@@ -8,42 +8,50 @@
   <div class="col-lg-9 col-md-9 topic-list">
     <div class="card">
       <div class="card-body bg-transparent">
-        <div class="input-group">
-
-          <input type="text" class="form-control" placeholder="输入需要查询的题目" aria-label="" aria-describedby="">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="submit">搜索</button>
+        <form action="{{ route('questions.index') }}" method="GET" accept-charset="UTF-8">
+          <div class="input-group">
+            <input name="search" type="text" class="form-control" placeholder="输入需要查询的题目" aria-label=""
+              value="{{request()->get('search', '')}}" aria-describedby="">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">搜索</button>
+            </div>
           </div>
-        </div>
-
-        {{-- <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="输入需要查询的题目" aria-label="Search">
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-        </form> --}}
+        </form>
       </div>
     </div>
 
-    <div class="card mt-2">
-      <div class="card-body">
-        <h6 class="border-bottom border-gray pb-2 mb-0">相关题目</h6>
-        <div class="media py-2 border-bottom border-gray">
-          <div class="media-body">
-            <h5 class="mb-1">List-based media object</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-            odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-            fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
-        <div class="media py-2 border-bottom border-gray">
-          <div class="media-body">
-            <h5 class="mb-1">List-based media object</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-            odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-            fringilla. Donec lacinia congue felis in faucibus.
+    <div class="list-group  mt-2">
+      @foreach ($questions as $item)
+      <div class="list-group-item">
+        <div class="d-flex align-items-center">
+          <div class="badge badge-success d-block">{{ $item->category }}</div>
+          <div class="ml-3">
+            <h5 class="mb-1">{{ $item->question }}</h5>
+            <p class="mb-1">{{ $item->answer }}</p>
           </div>
         </div>
       </div>
+      @endforeach
+
+      @if(count($questions) === 0)
+      <div class="list-group-item">
+        <div class="justify-content-between">
+          <h5 class="mb-1">暂无数据</h5>
+        </div>
+        <p class="mb-1">
+          少侠可以尝试输入其他关键词，可以使用空格间隔【搜索词】。<br>
+          例如搜索 <span class="badge badge-success">钓鱼 愿者上钩</span> 即可搜索出包含钓鱼、愿者上钩相关内容。
+        </p>
+      </div>
+      @endif
     </div>
+
+    {{-- 分页 --}}
+    @if($questions->lastPage() > 1)
+    <div class="mt-3">
+      {!! $questions->appends(Request::except('page'))->render() !!}
+    </div>
+    @endif
   </div>
 
   <div class="col-lg-3 col-md-3 sidebar mt-md-0 mt-sm-2">

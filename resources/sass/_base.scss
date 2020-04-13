@@ -52,7 +52,7 @@ body {
 }
 
 #app>div.container {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .simditor-body img {
@@ -61,5 +61,27 @@ body {
 
 /* card */
 .card--color {
-  border-top: 4px solid #00b5ad;
+  border-top: 4px solid $green;
+}
+
+/* page */
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
+}
+
+/* button */
+.btn-primary {
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
+}
+
+/* nav */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: $green;
 }
