@@ -14,13 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace' => 'Web'], function () {
-    Route::get('/', 'TopicsController@index')->name('index');
+// 用户身份验证相关的路由
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-    // 用户身份验证相关的路由
-    Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-    Route::post('login', 'Auth\LoginController@login');
-    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::group(['namespace' => 'Web'], function () {
+    // 首页
+    Route::get('/', 'TopicsController@index')->name('index');
 
     // 相关路由
     Route::resource('replies', 'RepliesController', ['only' => ['store']]);
