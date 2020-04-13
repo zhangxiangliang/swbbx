@@ -17005,45 +17005,39 @@ body {
   max-width: 100%;
 }
 
+/* card */
+
+.card--color {
+  border-top: 4px solid #00b5ad;
+}
+
 /* Topic Index Page */
 
-.index-page .topic-list .nav > li > a,
-.topics-index-page .topic-list .nav > li > a,
-.categories-show-page .topic-list .nav > li > a {
+.topic-list .nav > li > a {
   position: relative;
   display: block;
   padding: 5px 14px;
   font-size: 0.9em;
 }
 
-.index-page .topic-list a,
-.topics-index-page .topic-list a,
-.categories-show-page .topic-list a {
+.topic-list a {
   color: #444444;
 }
 
-.index-page .topic-list .meta,
-.topics-index-page .topic-list .meta,
-.categories-show-page .topic-list .meta {
+.topic-list .meta {
   font-size: 0.9em;
   color: #b3b3b3;
 }
 
-.index-page .topic-list .meta a,
-.topics-index-page .topic-list .meta a,
-.categories-show-page .topic-list .meta a {
+.topic-list .meta a {
   color: #b3b3b3;
 }
 
-.index-page .topic-list .badge,
-.topics-index-page .topic-list .badge,
-.categories-show-page .topic-list .badge {
+.topic-list .badge {
   background-color: #d8d8d8;
 }
 
-.index-page .topic-list hr,
-.topics-index-page .topic-list hr,
-.categories-show-page .topic-list hr {
+.topic-list hr {
   margin-top: 12px;
   margin-bottom: 12px;
   border: 0;
