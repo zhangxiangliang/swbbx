@@ -1,3 +1,4 @@
+@if(count($replies))
 <ul class="list-unstyled">
   @foreach ($replies as $index => $reply)
   <li class=" media" name="reply{{ $reply->id }}" id="reply{{ $reply->id }}">
@@ -26,6 +27,8 @@
   @if ( ! $loop->last)
   <hr>
   @endif
-
   @endforeach
 </ul>
+@else
+<h5 class="mb-1">暂无数据</h5>
+@endif
