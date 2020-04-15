@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Web;
 
 use App\Models\Server;
 use Illuminate\Http\Request;
-use App\Http\Requests\ReplyRequest;
 
 class ServersController extends Controller
 {
@@ -13,12 +12,17 @@ class ServersController extends Controller
         $this->middleware('auth', ['except' => ['index']]);
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $servers = Server::with('subjects')
-            ->where('pid', 0)
-            ->recent()
-            ->get();
+        $keywords = $request->get('search', '') === '' ? [] : explode(' ', $request->search);
+
+        $query = Server::with('branches', 'master');
+
+        foreach ($keywords as $keyword) {
+            $query->where('name', 'like', '%'. $keyword . '%');
+        }
+
+        $servers = $query->recent()->paginate(12);
 
         return view('servers.index', compact('servers'));
     }

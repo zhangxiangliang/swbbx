@@ -10,8 +10,18 @@ class Server extends Model
         'birthday' => 'datetime:Y-m-d H:i:s',
     ];
 
-    public function subjects()
+    public function scopeRecent($query)
+    {
+        return $query->orderBy('birthday', 'desc');
+    }
+
+    public function branches()
     {
         return $this->hasMany(Server::class, 'id', 'pid');
+    }
+
+    public function master()
+    {
+        return $this->hasOne(Server::class, 'pid', 'id');
     }
 }
