@@ -12,7 +12,10 @@ class CreateQuestionsTable extends Migration
             $table->string('category');
             $table->string('question');
             $table->string('answer');
-            $table->timestamps();
+
+            // 时间线
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 

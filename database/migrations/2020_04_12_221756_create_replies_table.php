@@ -12,7 +12,10 @@ class CreateRepliesTable extends Migration
             $table->integer('topic_id')->unsigned()->default(0)->index();
             $table->bigInteger('user_id')->unsigned()->default(0)->index();
             $table->text('content');
-            $table->timestamps();
+
+            // 时间线
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
