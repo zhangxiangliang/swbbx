@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     <div class="card">
-      <div class="card-body bg-transparent">
+      <div class="card-header bg-transparent">
         <form action="{{ route('questions.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
             <input name="search" type="text" class="form-control" placeholder="输入需要查询的题目" aria-label=""

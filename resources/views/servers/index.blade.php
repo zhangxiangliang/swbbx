@@ -8,7 +8,7 @@
   <div class="col-lg-9 col-md-9 topic-list">
 
     <div class="card">
-      <div class="card-body bg-transparent">
+      <div class="card-header bg-transparent">
         <form action="{{ route('servers.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
             <input name="search" type="text" class="form-control" placeholder="输入需要查询的服务器" aria-label=""
@@ -20,6 +20,7 @@
         </form>
       </div>
     </div>
+
     @if(count($servers) === 0)
     <div class="list-group mt-2">
       <div class="list-group-item">
