@@ -28,6 +28,11 @@ body {
   margin-bottom: 60px;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -74,6 +79,22 @@ body {
 
 /* button */
 .btn-primary {
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
+}
+
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover {
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
   color: #fff;
   background-color: $green;
   border-color: $green;

@@ -6,7 +6,7 @@
 
 <div class="row">
 
-  <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
+  <div class="col-lg-3 col-md-3 d-sm-none d-xs-none d-md-block user-info">
     <div class="card ">
       @if ($user->avatar)
       <img class="card-img-top" src="{{ $user->avatar }}" alt="{{ $user->name }}">

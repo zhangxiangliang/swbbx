@@ -6,16 +6,15 @@
 @section('content')
 
 <div class="row">
-
-  <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
-    <div class="card ">
+  <div class="col-lg-3 col-md-3 d-sm-none d-xs-none d-md-block author-info">
+    <div class="card">
       <div class="card-body">
         <div class="text-center">
           作者：{{ $topic->user->name }}
         </div>
         <hr>
         <div class="media">
-          <div align="center">
+          <div class="center">
             <a href="{{ route('users.show', $topic->user->id) }}">
               <img class="thumbnail img-fluid" src="{{ $topic->user->avatar }}" width="300px" height="300px">
             </a>
@@ -70,7 +69,6 @@
         @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
       </div>
     </div>
-
   </div>
 </div>
 @stop

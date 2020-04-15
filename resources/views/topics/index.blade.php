@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="row mb-5">
+<div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     @if (isset($category))
     <div class="alert alert-info" role="alert">
@@ -35,7 +35,7 @@
         @include('topics._topic_list', ['topics' => $topics])
         {{-- 分页 --}}
         @if($topics->lastPage() > 1)
-        <div class="mt-5">
+        <div class="mt-2">
           {!! $topics->appends(Request::except('page'))->render() !!}
         </div>
         @endif
