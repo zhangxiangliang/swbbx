@@ -20,18 +20,25 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::group(['namespace' => 'Web'], function () {
-    // 首页
+    // 系统相关
     Route::get('/', 'TopicsController@index')->name('index');
+    Route::get('notifications', 'NotificationsController@index')->name('notifications.index');
 
-    // 相关路由
-    Route::resource('replies', 'RepliesController', ['only' => ['store']]);
+    // 用户相关
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
-    Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
-    Route::resource('questions', 'QuestionsController', ['only' => ['index']]);
-    Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
+
+    // 服务器相关
+    Route::get('servers', 'ServersController@index')->name('servers.index');
+
+    // 科举相关
+    Route::get('questions', 'QuestionsController@index')->name('questions.index');
+
+    // 话题分类
+    Route::get('categories/{category}', 'CategoriesController@show')->name('categories.show');
 
     // 话题相关路由
-    Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
+    Route::resource('replies', 'RepliesController', ['only' => ['store']]);
+    Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit']]);
     Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
     Route::post('topics/upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 });
