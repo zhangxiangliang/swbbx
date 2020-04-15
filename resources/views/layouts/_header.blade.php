@@ -19,6 +19,9 @@
         <li class="nav-item {{request()->is('questions') ? 'active': ''}}">
           <a class="nav-link" href="{{ route('questions.index') }}">科举</a>
         </li>
+        <li class="nav-item {{request()->is('servers') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('servers.index') }}">服务器</a>
+        </li>
         <li class="nav-item {{request()->is('categories/1') ? 'active': ''}}">
           <a class="nav-link" href="{{ route('categories.show', 1) }}">公告</a>
         </li>

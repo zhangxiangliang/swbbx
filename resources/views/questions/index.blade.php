@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="list-group  mt-2">
+    <div class="list-group mt-2">
       @foreach ($questions as $item)
       <div class="list-group-item">
         <div class="d-flex align-items-center">
