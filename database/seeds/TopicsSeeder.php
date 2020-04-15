@@ -5,7 +5,7 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 
-class TopicsTableSeeder extends Seeder
+class TopicsSeeder extends Seeder
 {
     public function run()
     {

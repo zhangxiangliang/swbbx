@@ -1281,8 +1281,8 @@ class QuestionMathSeeder extends Seeder
             ],
         ];
 
-        $questions = collect($questions)->map(function ($skill) {
-            return array_merge($skill, [
+        $questions = collect($questions)->map(function ($item) {
+            return array_merge($item, [
                 "created_at" => Carbon::now(),
                 "updated_at" => Carbon::now(),
             ]);

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\Reply;
 
-class RepliesTableSeeder extends Seeder
+class RepliesSeeder extends Seeder
 {
     public function run()
     {
