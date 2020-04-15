@@ -21,14 +21,6 @@ class UsersSeeder extends Seeder
             'avatar' => config('app.url'). "/images/avatar/xiaoer.jpg",
             'introduction' => '让我们一起闯荡神武'
         ]);
-
-        $user = User::create([
-            'name' => '陈小四',
-            'email' => 'gungun@pushme.top',
-            'password' => Hash::make('swbbxxiaosi'),
-            'avatar' => config('app.url'). "/images/avatar/xiaosi.jpg",
-            'introduction' => '神武百宝箱酱油队队长'
-        ]);
     }
 }
 

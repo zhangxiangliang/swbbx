@@ -13,7 +13,7 @@ class TopicsSeeder extends Seeder
         Topic::create([
             'user_id' => 1,
             'category_id' => 1,
-            'reply_count' => 2,
+            'reply_count' => 0,
             'title' => '神武百宝箱全新版本重磅来袭~',
             'body' => '<blockquote><p>神武百宝箱全新版本重磅来袭~<br /></p></blockquote>'
         ]);
