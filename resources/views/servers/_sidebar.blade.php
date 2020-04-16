@@ -15,11 +15,11 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item">收集神武服务器、等级上限、角色数量、合区信息等内容，只为更方便少侠选取自己喜欢的神武世界。</li>
   </ul>
-  <div class="card-body">
+  {{-- <div class="card-body">
     <a href="#" class="btn btn-success btn-block">
       创建服务器
     </a>
-  </div>
+  </div> --}}
 </div>
 @endif
 

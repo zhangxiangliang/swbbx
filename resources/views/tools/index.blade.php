@@ -21,7 +21,7 @@
                 <p class="mb-1">{{$tool->description}}</p>
               </div>
               @if($tool->route === '')
-              <div class="badge badge-secondary d-block">开发</div>
+              <div class="badge badge-secondary d-block">开发中</div>
               @else
               <div class="badge badge-success d-block">查看</div>
               @endif

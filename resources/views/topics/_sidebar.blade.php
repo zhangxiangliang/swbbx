@@ -1,10 +1,10 @@
 @if (isset($category) && $category->name === '公告')
 <div class="card card--color">
   <div class="card-header bg-transparent">
-    公告
+    {{ $category->name }}
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">发布站点公告，记录版本信息</li>
+    <li class="list-group-item">{{ $category->description }}</li>
   </ul>
 </div>
 @else
