@@ -21,7 +21,7 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::group(['namespace' => 'Web'], function () {
     // 系统相关
-    Route::get('/', 'TopicsController@index')->name('index');
+    Route::get('/', 'ToolsController@index')->name('tools.index');
     Route::get('notifications', 'NotificationsController@index')->name('notifications.index');
 
     // 用户相关

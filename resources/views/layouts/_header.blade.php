@@ -13,17 +13,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item {{request()->is('topics') || request()->is('/') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('topics.index') }}">首页</a>
+        <li class="nav-item {{request()->is('tools') || request()->is('/') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('tools.index') }}">首页</a>
         </li>
         <li class="nav-item {{request()->is('questions') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('questions.index') }}">科举</a>
+          <a class="nav-link" href="{{ route('questions.index') }}">科举题库</a>
         </li>
         <li class="nav-item {{request()->is('servers') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('servers.index') }}">服务器</a>
+          <a class="nav-link" href="{{ route('servers.index') }}">组队结伴</a>
         </li>
         <li class="nav-item {{request()->is('categories/1') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('categories.show', 1) }}">公告</a>
+          <a class="nav-link" href="{{ route('categories.show', 1) }}">公告中心</a>
         </li>
       </ul>
 
