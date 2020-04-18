@@ -17,6 +17,11 @@ class DatabaseSeeder extends Seeder
         $this->call(ServersSeeder::class);
         $this->call(RepliesSeeder::class);
 
+        // 物品数据
+        $this->call(ItemAquaticSeeder::class);
+        $this->call(ItemGemSeeder::class);
+        $this->call(ItemProduceSeeder::class);
+
         // 科举题库
         $this->call(QuestionChessSeeder::class);
         $this->call(QuestionGameSeeder::class);
