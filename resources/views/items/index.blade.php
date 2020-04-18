@@ -43,15 +43,16 @@
             </div>
           </div>
           <div class="list-group-item">
-            <div>说明</div>
-            <div>{{$item->description}}</div>
+            <div>说明: {{$item->description ? $item->description : '无'}}</div>
           </div>
           <div class="list-group-item">
-            <div>作用</div>
-            <div>{{$item->use}}</div>
+            <div>作用: {{$item->use ? $item->use : '无'}}</div>
           </div>
           <div class="list-group-item">
             <div>出处</div>
+            @if(count($item->maps) === 0)
+            <div class="badge badge-success">无</div>
+            @endif
             @foreach($item->maps as $map)
             <div class="badge badge-success">{{$map}}</div>
             @endforeach
