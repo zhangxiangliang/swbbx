@@ -17016,6 +17016,13 @@ p {
   border-top: 4px solid #00B5AE;
 }
 
+@media (min-width: 375px) and (max-width: 767.98px) {
+  .card-columns {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
+
 /* page */
 
 .page-item.active .page-link {

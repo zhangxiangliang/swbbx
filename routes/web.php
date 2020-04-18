@@ -24,6 +24,9 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('/', 'ToolsController@index')->name('tools.index');
     Route::get('notifications', 'NotificationsController@index')->name('notifications.index');
 
+    // 物品相关
+    Route::get('items', 'ItemsController@index')->name('items.index');
+
     // 用户相关
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
