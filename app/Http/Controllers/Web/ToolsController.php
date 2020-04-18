@@ -15,6 +15,7 @@ class ToolsController extends Controller
             (object)['title' => '坐骑图鉴', 'description' => '坐骑技能与展示', 'category' => '图鉴', 'route' => ''],
             (object)['title' => '变身卡图鉴', 'description' => '坐骑技能与展示', 'category' => '图鉴', 'route' => ''],
             (object)['title' => '装备图鉴', 'description' => '属性特效特技', 'category' => '图鉴', 'route' => ''],
+            (object)['title' => '物品图鉴', 'description' => '网罗神武物品', 'category' => '图鉴', 'route' => route('items.index')],
 
             // 计算器
             (object)['title' => '元宵计算器', 'description' => '元宵颗颗不浪费', 'category' => '计算器', 'route' => ''],
