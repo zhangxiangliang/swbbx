@@ -25,7 +25,7 @@ class QuestionsController extends Controller
                 ->orWhere('question', 'like', '%'. $keyword . '%');
         }
 
-        $questions = $query->paginate();
+        $questions = $query->paginate(12);
 
         return view('questions.index', compact('questions'));
     }
