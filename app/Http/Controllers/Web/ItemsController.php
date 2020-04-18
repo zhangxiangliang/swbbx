@@ -12,9 +12,17 @@ class ItemsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $items = Item::paginate(12);
+        $keywords = $request->get('search', '') === '' ? [] : explode(' ', $request->search);
+
+        $query = Item::query();
+
+        foreach ($keywords as $keyword) {
+            $query->where('name', 'like', '%'. $keyword . '%');
+        }
+
+        $items = $query->recent()->paginate(12);
 
         return view('items.index', compact('items'));
     }
