@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddNotificationCountToUsersTable extends Migration
+class CreateItemProduceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddNotificationCountToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('notification_count')->unsigned()->default(0);
+        Schema::create('item_produce', function (Blueprint $table) {
+            // 标识
+            $table->id();
+            $table->integer('item_id')->default(0);
+            $table->integer('produce_id')->default(0);
         });
     }
 
@@ -25,8 +28,6 @@ class AddNotificationCountToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('notification_count');
-        });
+        Schema::dropIfExists('item_produce');
     }
 }

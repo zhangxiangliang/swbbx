@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateProducesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('produces', function (Blueprint $table) {
             // 标识
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-
-            // 用户数据
-            $table->string('avatar')->nullable();
-            $table->string('introduction')->nullable();
-            $table->integer('notification_count')->unsigned()->default(0);
+            $table->string('name')->nullable()->comment('组合名称');
+            $table->string('cover')->nullable()->comment('组合封面');
+            $table->string('category')->nullable()->comment('组合分类');
 
             // 时间线
             $table->dateTime('created_at');
@@ -38,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('produces');
     }
 }

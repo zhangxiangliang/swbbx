@@ -14,8 +14,10 @@ class CreateItemsTable extends Migration
     public function up()
     {
         Schema::create('items', function (Blueprint $table) {
-            // 数据结构
+            // 标识
             $table->id();
+
+            // 数据结构
             $table->string('name')->nullable()->comment('物品名称');
             $table->string('cover')->nullable()->comment('物品封面');
             $table->json('keywords')->nullable()->comment('物品关键词');
