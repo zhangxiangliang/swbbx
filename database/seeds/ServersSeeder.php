@@ -106,6 +106,7 @@ class ServersSeeder extends Seeder
             ["name" => "天工造物", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2020-04-03"],
             ["name" => "鸿运当头", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2020-03-20"],
             ["name" => "旗开得胜", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2020-03-06"],
+            ["name" => "勇往直前", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2020-04-17"],
         ];
 
         $servers = collect($servers)->sortBy('birthday')->map(function ($item) {

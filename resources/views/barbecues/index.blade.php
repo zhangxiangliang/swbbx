@@ -21,33 +21,29 @@
       </div>
     </div>
 
-    @if(count($barbecues) === 0)
-    <div class="list-group mt-2">
-      <div class="list-group-item">
-        <div class="justify-content-between">
-          <h5 class="mb-1">暂无数据</h5>
-        </div>
-      </div>
-    </div>
-    @endif
+    <div class="mt-2">
+      @if(count($barbecues) === 0)
+      @include('shared._404')
+      @endif
 
-    <div class="card-columns mt-2">
-      @foreach ($barbecues as $barbecue)
-      <div class="card">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div>{{ $barbecue->name }}</div>
-          </div>
-          <div class="list-group-item">
-            <div>配方</div>
-            @foreach ($barbecue->items as $item)
-            <div class="badge badge-success">{{ $item->name }}</div>
-            @endforeach
+      <div class="card-columns">
+        @foreach ($barbecues as $barbecue)
+        <div class="card">
+          <div class="list-group list-group-flush">
+            <div class="list-group-item">
+              <div>{{ $barbecue->name }}</div>
+            </div>
+            <div class="list-group-item">
+              <div>配方</div>
+              @foreach ($barbecue->items as $item)
+              <div class="badge badge-success">{{ $item->name }}</div>
+              @endforeach
+            </div>
           </div>
         </div>
-      </div>
-      @endforeach
+        @endforeach
 
+      </div>
     </div>
   </div>
 

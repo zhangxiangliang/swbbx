@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
-
+    {{-- 搜索 --}}
     <div class="card">
       <div class="card-header bg-transparent">
         <form action="{{ route('questions.index') }}" method="GET" accept-charset="UTF-8">
@@ -21,34 +21,29 @@
       </div>
     </div>
 
-    @if(count($questions) === 0)
-    <div class="list-group-item">
-      <div class="justify-content-between">
-        <h5 class="mb-1">暂无数据</h5>
-      </div>
-      <p class="mb-1">
-        少侠可以尝试输入其他关键词，可以使用空格间隔【搜索词】。<br>
-        例如搜索 <span class="badge badge-success">钓鱼 愿者上钩</span> 即可搜索出包含钓鱼、愿者上钩相关内容。
-      </p>
-    </div>
-    @endif
+    {{-- 内容 --}}
+    <div class="mt-2">
+      @if(count($questions) === 0)
+      @include('shared._404')
+      @endif
 
-    <div class="card-columns mt-2">
-      @foreach ($questions as $item)
-      <div class="card">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <span class="badge badge-success">{{$item->category}}</span>
-          </div>
-          <div class="list-group-item">
-            问题: {{ $item->question }}
-          </div>
-          <div class="list-group-item">
-            答案: {{ $item->answer }}
+      <div class="card-columns">
+        @foreach ($questions as $item)
+        <div class="card">
+          <div class="list-group list-group-flush">
+            <div class="list-group-item">
+              <span class="badge badge-success">{{$item->category}}</span>
+            </div>
+            <div class="list-group-item">
+              问题: {{ $item->question }}
+            </div>
+            <div class="list-group-item">
+              答案: {{ $item->answer }}
+            </div>
           </div>
         </div>
+        @endforeach
       </div>
-      @endforeach
     </div>
 
     {{-- 分页 --}}
