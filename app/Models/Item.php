@@ -10,4 +10,9 @@ class Item extends Model
         'keywords' => 'json',
         'maps' => 'json',
     ];
+
+    public function produces()
+    {
+        return $this->belongsToMany(Produce::class);
+    }
 }

@@ -4,7 +4,7 @@ use App\Models\Item;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 
-class ItemGemSeeder extends Seeder
+class ItemsGemSeeder extends Seeder
 {
     /**
      * Run the database seeds.

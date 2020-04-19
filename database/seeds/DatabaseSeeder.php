@@ -13,29 +13,33 @@ class DatabaseSeeder extends Seeder
     {
         // 基础
         $this->call(UsersSeeder::class);
+        $this->call(CategoriesSeeder::class);
         $this->call(TopicsSeeder::class);
         $this->call(ServersSeeder::class);
         $this->call(RepliesSeeder::class);
 
         // 物品数据
-        $this->call(ItemAquaticSeeder::class);
-        $this->call(ItemGemSeeder::class);
-        $this->call(ItemProduceSeeder::class);
+        $this->call(ItemsAquaticSeeder::class);
+        $this->call(ItemsGemSeeder::class);
+        $this->call(ItemsProduceSeeder::class);
+
+        // 产物
+        $this->call(ProducesBarbecueSeeder::class);
 
         // 科举题库
-        $this->call(QuestionChessSeeder::class);
-        $this->call(QuestionGameSeeder::class);
-        $this->call(QuestionGeographySeeder::class);
-        $this->call(QuestionHistorySeeder::class);
-        $this->call(QuestionIdiomSeeder::class);
-        $this->call(QuestionLawSeeder::class);
-        $this->call(QuestionLifeSeeder::class);
-        $this->call(QuestionLiteratureSeeder::class);
-        $this->call(QuestionMathSeeder::class);
-        $this->call(QuestionMedicineSeeder::class);
-        $this->call(QuestionMusicSeeder::class);
-        $this->call(QuestionReligionSeeder::class);
-        $this->call(QuestionRiddleSeeder::class);
-        $this->call(QuestionTeaSeeder::class);
+        $this->call(QuestionsChessSeeder::class);
+        $this->call(QuestionsGameSeeder::class);
+        $this->call(QuestionsGeographySeeder::class);
+        $this->call(QuestionsHistorySeeder::class);
+        $this->call(QuestionsIdiomSeeder::class);
+        $this->call(QuestionsLawSeeder::class);
+        $this->call(QuestionsLifeSeeder::class);
+        $this->call(QuestionsLiteratureSeeder::class);
+        $this->call(QuestionsMathSeeder::class);
+        $this->call(QuestionsMedicineSeeder::class);
+        $this->call(QuestionsMusicSeeder::class);
+        $this->call(QuestionsReligionSeeder::class);
+        $this->call(QuestionsRiddleSeeder::class);
+        $this->call(QuestionsTeaSeeder::class);
     }
 }

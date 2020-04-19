@@ -4,7 +4,7 @@ use App\Models\Question;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 
-class QuestionTeaSeeder extends Seeder
+class QuestionsTeaSeeder extends Seeder
 {
     /**
      * Run the database seeds.

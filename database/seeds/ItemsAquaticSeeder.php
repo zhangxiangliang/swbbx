@@ -4,7 +4,7 @@ use App\Models\Item;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 
-class ItemAquaticSeeder extends Seeder
+class ItemsAquaticSeeder extends Seeder
 {
     /**
      * Run the database seeds.

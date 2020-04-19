@@ -4,7 +4,7 @@ use App\Models\Question;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 
-class QuestionMedicineSeeder extends Seeder
+class QuestionsMedicineSeeder extends Seeder
 {
     /**
      * Run the database seeds.

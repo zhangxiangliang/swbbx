@@ -4,7 +4,7 @@ use App\Models\Question;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 
-class QuestionGeographySeeder extends Seeder
+class QuestionsGeographySeeder extends Seeder
 {
     /**
      * Run the database seeds.
