@@ -26,6 +26,7 @@ Route::group(['namespace' => 'Web'], function () {
 
     // 物品相关
     Route::get('items', 'ItemsController@index')->name('items.index');
+    Route::get('barbecues', 'BarbecuesController@index')->name('barbecues.index');
 
     // 用户相关
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);

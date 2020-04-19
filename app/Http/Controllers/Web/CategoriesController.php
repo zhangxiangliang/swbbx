@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function show(Category $category)
     {
         // 读取分类 ID 关联的话题，并按每 20 条分页

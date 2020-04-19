@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class ToolsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index']]);
+    }
+
     public function index()
     {
         $tools = [
@@ -25,9 +30,9 @@ class ToolsController extends Controller
             (object)['title' => '宝石计算器', 'description' => '宝石计算与图鉴', 'category' => '计算器', 'route' => ''],
 
             // 攻略
+            (object)['title' => '篝火派对', 'description' => '烧烤培训速成班', 'category' => '攻略', 'route' => route('barbecues.index')],
             (object)['title' => '奇遇秘籍', 'description' => '碧波仙子在招手', 'category' => '攻略', 'route' => ''],
             (object)['title' => '江湖恩仇录', 'description' => '神武社交宝典', 'category' => '攻略', 'route' => ''],
-            (object)['title' => '篝火派对', 'description' => '烧烤培训速成班', 'category' => '攻略', 'route' => ''],
             (object)['title' => '休闲钓鱼', 'description' => '欲与太公试比高', 'category' => '攻略', 'route' => ''],
 
             // 小工具

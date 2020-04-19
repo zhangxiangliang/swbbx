@@ -11,7 +11,7 @@
       <div class="card-header bg-transparent">
         <form action="{{ route('items.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
-            <input name="search" type="text" class="form-control" placeholder="输入需要查询的" aria-label=""
+            <input name="search" type="text" class="form-control" placeholder="输入需要查询的物品" aria-label=""
               value="{{request()->get('search', '')}}" aria-describedby="">
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit">搜索</button>

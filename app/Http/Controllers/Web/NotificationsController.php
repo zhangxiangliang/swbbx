@@ -12,6 +12,11 @@ class NotificationsController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         // 获取登录用户的所有通知
