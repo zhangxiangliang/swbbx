@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ServersSeeder::class);
         $this->call(RepliesSeeder::class);
 
+        // 地图
+        $this->call(MapsSeeder::class);
+
         // 物品数据
         $this->call(ItemsAquaticSeeder::class);
         $this->call(ItemsGemSeeder::class);
@@ -25,6 +28,10 @@ class DatabaseSeeder extends Seeder
 
         // 产物
         $this->call(ProducesBarbecueSeeder::class);
+        $this->call(ProducesFavoriteSeeder::class);
+
+        // NPC
+        $this->call(NpcsSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
