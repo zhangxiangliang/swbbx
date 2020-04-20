@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProducesTable extends Migration
+class CreateNpcFriendTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateProducesTable extends Migration
      */
     public function up()
     {
-        Schema::create('produces', function (Blueprint $table) {
+        Schema::create('npc_friend', function (Blueprint $table) {
             // 标识
             $table->id();
-            $table->string('name')->nullable()->comment('组合名称');
-            $table->string('category')->nullable()->comment('组合分类');
-
-            // 时间线
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->integer('npc_id')->default(0);
+            $table->integer('friend_id')->default(0);
         });
     }
 
@@ -32,6 +28,6 @@ class CreateProducesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produces');
+        Schema::dropIfExists('npc_friend');
     }
 }

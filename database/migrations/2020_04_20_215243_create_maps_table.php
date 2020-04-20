@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProducesTable extends Migration
+class CreateMapsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateProducesTable extends Migration
      */
     public function up()
     {
-        Schema::create('produces', function (Blueprint $table) {
-            // 标识
+        Schema::create('maps', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable()->comment('组合名称');
-            $table->string('category')->nullable()->comment('组合分类');
+            $table->string('name')->nullable()->comment('地图名称');
 
             // 时间线
             $table->dateTime('created_at');
@@ -32,6 +30,6 @@ class CreateProducesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produces');
+        Schema::dropIfExists('maps');
     }
 }
