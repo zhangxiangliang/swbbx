@@ -10,4 +10,9 @@ class Produce extends Model
     {
         return $this->belongsToMany(Item::class);
     }
+
+    public function npcs()
+    {
+        return $this->belongsToMany(Npc::class);
+    }
 }
