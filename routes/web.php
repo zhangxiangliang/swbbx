@@ -28,6 +28,9 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('items', 'ItemsController@index')->name('items.index');
     Route::get('barbecues', 'BarbecuesController@index')->name('barbecues.index');
 
+    // 江湖恩仇录
+    Route::get('npcs', 'NpcsController@index')->name('npcs.index');
+
     // 用户相关
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
