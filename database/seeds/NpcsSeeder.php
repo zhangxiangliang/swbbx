@@ -1048,7 +1048,7 @@ class NpcsSeeder extends Seeder
                 $relations[$key] = $produces[$value]['id'];
             }
 
-            $npc->produces()->attach($relations);
+            $npc->favorites()->attach($relations);
 
             $relations = [];
             $data = $items[$npc['name']]['relations'];
