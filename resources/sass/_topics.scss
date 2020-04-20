@@ -7,7 +7,9 @@
     font-size: 0.9em;
   }
 
-  a {
+  a.nav-link,
+  .media a,
+  .page-link {
     color: #444444;
   }
 

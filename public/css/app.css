@@ -17088,7 +17088,9 @@ p {
   font-size: 0.9em;
 }
 
-.topic-list a {
+.topic-list a.nav-link,
+.topic-list .media a,
+.topic-list .page-link {
   color: #444444;
 }
 
