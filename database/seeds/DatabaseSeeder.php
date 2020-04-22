@@ -33,8 +33,8 @@ class DatabaseSeeder extends Seeder
         // NPC
         $this->call(NpcsSeeder::class);
 
-        // 门派
-        $this->call(SchoolSeeder::class);
+        // 导师
+        $this->call(MapsTeacherSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
