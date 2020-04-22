@@ -7,11 +7,11 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 搜索 --}}
-    <div class="card mb-2">
+    <div class="card my-2">
       <div class="card-header bg-transparent">
         <form action="{{ route('npcs.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
-            <input name="search" type="text" class="form-control" placeholder="输入需要查询的NPC、地址、喜好、好友" aria-label=""
+            <input name="search" type="text" class="form-control" placeholder="输入需要查询的NPC、地图、喜好、好友" aria-label=""
               value="{{request()->get('search', '')}}" aria-describedby="">
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit">搜索</button>

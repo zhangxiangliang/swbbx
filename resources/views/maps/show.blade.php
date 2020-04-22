@@ -4,6 +4,8 @@
 
 @section('content')
 
+<h1>{{$map->name}}</h1>
+
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 内容 --}}

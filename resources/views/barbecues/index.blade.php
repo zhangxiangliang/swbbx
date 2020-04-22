@@ -6,8 +6,7 @@
 
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
-
-    <div class="card mb-2">
+    <div class="card my-2">
       <div class="card-header bg-transparent">
         <form action="{{ route('barbecues.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">

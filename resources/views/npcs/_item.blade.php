@@ -18,7 +18,7 @@
     <div class="list-group-item">
       <div>好友</div>
       @foreach ($npc->friends as $friend)
-      <a href="#" class="badge badge-success ">{{ $friend->name }}</a>
+      <a href="{{route('npcs.show', ['npc' => $friend->id])}}" class="badge badge-success ">{{ $friend->name }}</a>
       @endforeach
     </div>
   </div>
