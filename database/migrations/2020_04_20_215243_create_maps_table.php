@@ -15,7 +15,12 @@ class CreateMapsTable extends Migration
     {
         Schema::create('maps', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable()->comment('地图名称');
+            $table->integer('teacher_id')->default(0)->comment('导师 id');
+
+            // 数据结构
+            $table->string('name')->default('')->comment('名称');
+            $table->string('intro')->default('')->comment('简介');
+            $table->string('description')->default('')->comment('描述');
 
             // 时间线
             $table->dateTime('created_at');
