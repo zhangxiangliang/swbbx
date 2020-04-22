@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
 
-    <div class="card">
+    <div class="card mb-2">
       <div class="card-header bg-transparent">
         <form action="{{ route('barbecues.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
@@ -21,29 +21,26 @@
       </div>
     </div>
 
-    <div class="mt-2">
-      @if(count($barbecues) === 0)
-      @include('shared._404')
-      @endif
+    {{-- 无内容 --}}
+    @include('shared._404', ['items' => $barbecues])
 
-      <div class="card-columns">
-        @foreach ($barbecues as $barbecue)
-        <div class="card">
-          <div class="list-group list-group-flush">
-            <div class="list-group-item">
-              <div>{{ $barbecue->name }}</div>
-            </div>
-            <div class="list-group-item">
-              <div>配方</div>
-              @foreach ($barbecue->items as $item)
-              <div class="badge badge-success">{{ $item->name }}</div>
-              @endforeach
-            </div>
+    {{-- 内容 --}}
+    <div class="card-columns">
+      @foreach ($barbecues as $barbecue)
+      <div class="card">
+        <div class="list-group list-group-flush">
+          <div class="list-group-item">
+            <div>{{ $barbecue->name }}</div>
+          </div>
+          <div class="list-group-item">
+            <div>配方</div>
+            @foreach ($barbecue->items as $item)
+            <div class="badge badge-success">{{ $item->name }}</div>
+            @endforeach
           </div>
         </div>
-        @endforeach
-
       </div>
+      @endforeach
     </div>
   </div>
 

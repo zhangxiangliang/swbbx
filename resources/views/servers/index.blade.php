@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 搜索 --}}
-    <div class="card">
+    <div class="card mb-2">
       <div class="card-header bg-transparent">
         <form action="{{ route('servers.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
@@ -21,43 +21,40 @@
       </div>
     </div>
 
-    {{-- 内容 --}}
-    <div class="mt-2">
-      @if(count($servers) === 0)
-      @include('shared._404')
-      @endif
+    {{-- 无内容 --}}
+    @include('shared._404', ['items' => $servers])
 
-      <div class="card-columns">
-        @foreach ($servers as $server)
-        <div class="card">
-          <div class="list-group list-group-flush">
-            <div class="list-group-item">
-              <div>{{ $server->name }}</div>
-              <div>{{ $server->birthday->format('Y-m-d') }}</div>
-            </div>
-            @if($server->pid === 0)
-            <div class="list-group-item">
-              <div>合区信息</div>
-              <div class="badge badge-success">{{ $server->name }}</div>
-              @foreach ($server->branches as $branch)
-              <div class="badge badge-success">{{ $branch->name }}</div>
-              @endforeach
-            </div>
-            @else
-            <div class="list-group-item">
-              <div>所属服务器</div>
-              <div class="badge badge-success">{{ $server->master->name }}</div>
-            </div>
-            @endif
-            <div class="list-group-item">
-              <div>服务器信息</div>
-              <div class="badge badge-success">角色数量 {{ $server->role_count }}</div>
-              <div class="badge badge-success">等级上限 {{ $server->level }}</div>
-            </div>
+    {{-- 内容 --}}
+    <div class="card-columns">
+      @foreach ($servers as $server)
+      <div class="card">
+        <div class="list-group list-group-flush">
+          <div class="list-group-item">
+            <div>{{ $server->name }}</div>
+            <div>{{ $server->birthday->format('Y-m-d') }}</div>
+          </div>
+          @if($server->pid === 0)
+          <div class="list-group-item">
+            <div>合区信息</div>
+            <div class="badge badge-success">{{ $server->name }}</div>
+            @foreach ($server->branches as $branch)
+            <div class="badge badge-success">{{ $branch->name }}</div>
+            @endforeach
+          </div>
+          @else
+          <div class="list-group-item">
+            <div>所属服务器</div>
+            <div class="badge badge-success">{{ $server->master->name }}</div>
+          </div>
+          @endif
+          <div class="list-group-item">
+            <div>服务器信息</div>
+            <div class="badge badge-success">角色数量 {{ $server->role_count }}</div>
+            <div class="badge badge-success">等级上限 {{ $server->level }}</div>
           </div>
         </div>
-        @endforeach
       </div>
+      @endforeach
     </div>
 
     {{-- 分页 --}}
