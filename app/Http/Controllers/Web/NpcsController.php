@@ -11,7 +11,7 @@ class NpcsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index']]);
+        $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
     /**
@@ -44,5 +44,17 @@ class NpcsController extends Controller
         })->recent()->paginate(12);
 
         return view('npcs.index', compact('npcs'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Npc  $npc
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Npc $npc)
+    {
+        $npc->load('map', 'favorites', 'friends.favorites', 'friends.friends', 'friends.map');
+        return view('npcs.show', compact('npc'));
     }
 }

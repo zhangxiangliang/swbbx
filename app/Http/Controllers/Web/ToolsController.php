@@ -42,7 +42,7 @@ class ToolsController extends Controller
             (object)['title' => '武器模拟', 'description' => '欧皇非酋集中营', 'category' => '小工具', 'route' => ''],
             (object)['title' => '山水玄机图', 'description' => '山水是条不归路', 'category' => '小工具', 'route' => ''],
         ];
-        // $object= json_decode(json_encode($result_array, JSON_FORCE_OBJECT));
+
         $categories = collect($tools)->groupBy('category');
         return view('tools.index', compact('categories'));
     }
