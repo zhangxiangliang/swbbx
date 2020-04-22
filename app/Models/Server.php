@@ -7,6 +7,8 @@ class Server extends Model
     protected $fillable = [];
 
     protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s',
+        'updated_at' => 'datetime:Y-m-d H:i:s',
         'birthday' => 'datetime:Y-m-d H:i:s',
     ];
 
