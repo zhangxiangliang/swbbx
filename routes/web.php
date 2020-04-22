@@ -31,6 +31,10 @@ Route::group(['namespace' => 'Web'], function () {
     // 江湖恩仇录
     Route::get('npcs', 'NpcsController@index')->name('npcs.index');
 
+    // 门派相关
+    Route::get('maps', 'MapsController@index')->name('maps.index');
+    Route::get('maps/{map}', 'MapsController@show')->name('maps.show');
+
     // 用户相关
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
