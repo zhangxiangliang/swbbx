@@ -33,6 +33,9 @@ class DatabaseSeeder extends Seeder
         // NPC
         $this->call(NpcsSeeder::class);
 
+        // 门派
+        $this->call(SchoolSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
