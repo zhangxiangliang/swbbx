@@ -15,7 +15,6 @@ class NpcsSeeder extends Seeder
      */
     public function run()
     {
-
         $items = [
             [
                 "name" => "御林军左护卫",
