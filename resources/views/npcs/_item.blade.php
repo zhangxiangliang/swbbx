@@ -3,11 +3,15 @@
     <div class="list-group-item">
       <div class="d-flex align-items-center justify-content-between">
         <div>{{ $npc->name }}</div>
-        <a href="{{route('maps.show', ['map' => $npc->map->id])}}" class="badge badge-success">{{ $npc->map->name }}</a>
+        <a href="{{route('npcs.show', ['npc' => $npc->id])}}" class="badge badge-success ">查看</a>
       </div>
     </div>
     <div class="list-group-item">
       {{$npc->description}}
+    </div>
+    <div class="list-group-item">
+      <div>地图</div>
+      <a href="{{route('maps.show', ['map' => $npc->map->id])}}" class="badge badge-success">{{ $npc->map->name }}</a>
     </div>
     <div class="list-group-item">
       <div>喜好</div>

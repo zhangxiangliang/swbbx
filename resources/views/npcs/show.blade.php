@@ -21,6 +21,17 @@
       @endif
 
       {{-- 好友信息 --}}
+      @if($npc->map)
+      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#maps">
+        地图信息 <span class="badge badge-light">1</span>
+      </button>
+
+      <div class="collapse" id="maps">
+        @include('maps._list', ['maps' => [$npc->map]])
+      </div>
+      @endif
+
+      {{-- 好友信息 --}}
       @if($npc->friends)
       <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#npcs">
         好友信息 <span class="badge badge-light">{{count($npc->friends)}}</span>
@@ -31,6 +42,27 @@
       </div>
       @endif
 
+      {{-- 技能信息 --}}
+      @if(count($npc->baseSkills))
+      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#baseSkills">
+        师门技能 <span class="badge badge-light">{{count($npc->baseSkills)}}</span>
+      </button>
+
+      <div class="collapse" id="baseSkills">
+        @include('skills._list', ['skills' => $npc->baseSkills])
+      </div>
+      @endif
+
+      {{-- 技能信息 --}}
+      @if(count($npc->mountSkills))
+      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#mountSkills">
+        御魂技能 <span class="badge badge-light">{{count($npc->mountSkills)}}</span>
+      </button>
+
+      <div class="collapse" id="mountSkills">
+        @include('skills._list', ['skills' => $npc->mountSkills])
+      </div>
+      @endif
     </div>
   </div>
 
