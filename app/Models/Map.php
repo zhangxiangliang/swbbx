@@ -13,4 +13,14 @@ class Map extends Model
     {
         return $this->hasMany(Npc::class);
     }
+
+    public function baseSkills()
+    {
+        return $this->hasMany(Skill::class)->where('skills.type', 'normal');
+    }
+
+    public function mountSkills()
+    {
+        return $this->hasMany(Skill::class)->where('skills.type', 'mount');
+    }
 }

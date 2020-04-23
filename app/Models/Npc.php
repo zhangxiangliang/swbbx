@@ -18,4 +18,14 @@ class Npc extends Model
     {
         return $this->belongsToMany(Npc::class, 'npc_friend', 'npc_id', 'friend_id');
     }
+
+    public function baseSkills()
+    {
+        return $this->hasMany(Skill::class)->where('skills.type', 'normal');
+    }
+
+    public function mountSkills()
+    {
+        return $this->hasMany(Skill::class)->where('skills.type', 'mount');
+    }
 }
