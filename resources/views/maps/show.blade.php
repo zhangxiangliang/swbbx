@@ -21,49 +21,62 @@
       </div>
       @endif
 
-      {{-- 导师信息 --}}
-      @if($map->teacher)
-      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#teacher">
-        导师信息 <span class="badge badge-light">1</span>
-      </button>
+      <div id="group">
+        <div class="accordion-header">
+          @if($map->teacher)
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#teacher">
+            导师信息 <span class="badge badge-light">1</span>
+          </button>
+          @endif
 
-      <div class="collapse mb-2" id="teacher">
-        @include('npcs._item', ['npc' => $map->teacher])
+          @if($map->npcs)
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#npcs">
+            NPC 信息 <span class="badge badge-light">{{count($map->npcs)}}</span>
+          </button>
+          @endif
+
+          @if($map->teacher && count($map->baseSkills))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#baseSkills">
+            师门技能 <span class="badge badge-light">{{count($map->baseSkills)}}</span>
+          </button>
+          @endif
+
+          @if($map->teacher && count($map->mountSkills))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#mountSkills">
+            御魂技能 <span class="badge badge-light">{{count($map->mountSkills)}}</span>
+          </button>
+          @endif
+        </div>
+        <div class="accordion-group">
+          {{-- 导师信息 --}}
+          @if($map->teacher)
+          <div class="collapse" id="teacher" data-parent="#group">
+            @include('npcs._item', ['npc' => $map->teacher])
+          </div>
+          @endif
+
+          {{-- NPC信息 --}}
+          @if($map->npcs)
+          <div class="collapse " id="npcs" data-parent="#group">
+            @include('npcs._list', ['npcs' => $map->npcs])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if($map->teacher && count($map->baseSkills))
+          <div class="collapse" id="baseSkills" data-parent="#group">
+            @include('skills._list', ['skills' => $map->baseSkills])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if($map->teacher && count($map->mountSkills))
+          <div class="collapse" id="mountSkills" data-parent="#group">
+            @include('skills._list', ['skills' => $map->mountSkills])
+          </div>
+          @endif
+        </div>
       </div>
-      @endif
-
-      {{-- NPC信息 --}}
-      @if($map->npcs)
-      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#npcs">
-        NPC 信息 <span class="badge badge-light">{{count($map->npcs)}}</span>
-      </button>
-
-      <div class="collapse" id="npcs">
-        @include('npcs._list', ['npcs' => $map->npcs])
-      </div>
-      @endif
-
-      {{-- 技能信息 --}}
-      @if($map->teacher && count($map->baseSkills))
-      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#baseSkills">
-        师门技能 <span class="badge badge-light">{{count($map->baseSkills)}}</span>
-      </button>
-
-      <div class="collapse" id="baseSkills">
-        @include('skills._list', ['skills' => $map->baseSkills])
-      </div>
-      @endif
-
-      {{-- 技能信息 --}}
-      @if($map->teacher && count($map->mountSkills))
-      <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#mountSkills">
-        御魂技能 <span class="badge badge-light">{{count($map->mountSkills)}}</span>
-      </button>
-
-      <div class="collapse" id="mountSkills">
-        @include('skills._list', ['skills' => $map->mountSkills])
-      </div>
-      @endif
     </div>
   </div>
 

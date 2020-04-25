@@ -3,9 +3,8 @@
     <div class="list-group-item">
       <div class="d-flex align-items-center justify-content-between">
         <div>{{ $map->name }}</div>
-        @if(request()->is(('maps')))
+
         <a href="{{route('maps.show', ['map' => $map->id])}}" class="badge badge-success">查看</a>
-        @endif
       </div>
     </div>
     @if($map->intro)
