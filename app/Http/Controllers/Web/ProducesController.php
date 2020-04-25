@@ -21,13 +21,16 @@ class ProducesController extends Controller
     {
         $keywords = $request->get('search', '') === '' ? [] : explode(' ', $request->search);
 
-        $query = Produce::with('items');
+        $query = Produce::with('items')->withCount('items');
 
         foreach ($keywords as $keyword) {
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $produces = $query->whereNotIn('name', ["百花露", "变身卡"])->recent()->paginate();
+        $produces = $query
+            ->whereNotIn('name', ["百花露", "变身卡"])
+            ->orderBy('items_count', 'desc')
+            ->paginate();
 
         // 传参变量话题和分类到模板中
         return view('produces.index', compact('produces'));
