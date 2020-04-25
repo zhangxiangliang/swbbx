@@ -25,36 +25,7 @@
     @include('shared._404', ['items' => $items])
 
     {{-- 内容 --}}
-    <div class="card-columns">
-      @foreach ($items as $item)
-      <div class="card">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div>{{ $item->name }}</div>
-            <div>
-              <span class="badge badge-success">{{$item->level}}</span>
-              <span class="badge badge-success">{{$item->category}}</span>
-            </div>
-          </div>
-          <div class="list-group-item">
-            <div>说明: {{$item->description ? $item->description : '无'}}</div>
-          </div>
-          <div class="list-group-item">
-            <div>作用: {{$item->use ? $item->use : '无'}}</div>
-          </div>
-          <div class="list-group-item">
-            <div>出处</div>
-            @if(count($item->maps) === 0)
-            <div class="badge badge-success">无</div>
-            @endif
-            @foreach($item->maps as $map)
-            <div class="badge badge-success">{{$map}}</div>
-            @endforeach
-          </div>
-        </div>
-      </div>
-      @endforeach
-    </div>
+    @include('items._list', ['items' => $items])
 
     {{-- 分页 --}}
     @if($items->lastPage() > 1)
