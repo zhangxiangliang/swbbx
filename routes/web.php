@@ -26,6 +26,10 @@ Route::group(['namespace' => 'Web'], function () {
 
     // 物品相关
     Route::get('items', 'ItemsController@index')->name('items.index');
+    Route::get('items/{item}', 'ItemsController@show')->name('items.show');
+    Route::get('produces', 'ProducesController@index')->name('produces.index');
+    Route::get('produces/{produce}', 'ProducesController@show')->name('produces.show');
+    Route::get('produces/barbecues', 'ProducesController@barbecues')->name('produces.barbecues');
     Route::get('barbecues', 'BarbecuesController@index')->name('barbecues.index');
 
     // 江湖恩仇录

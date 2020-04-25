@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Models\Item;
+use App\Models\Produce;
 use Illuminate\Http\Request;
 
-class ItemsController extends Controller
+class ProducesController extends Controller
 {
     public function __construct()
     {
@@ -21,26 +21,27 @@ class ItemsController extends Controller
     {
         $keywords = $request->get('search', '') === '' ? [] : explode(' ', $request->search);
 
-        $query = Item::query();
+        $query = Produce::query();
 
         foreach ($keywords as $keyword) {
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $items = $query->recent()->paginate(12);
+        $produces = $query->paginate();
 
-        return view('items.index', compact('items'));
+        // 传参变量话题和分类到模板中
+        return view('produces.index', compact('produces'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Item $item
+     * @param  \App\Models\Produce $produce
      * @return \Illuminate\Http\Response
      */
-    public function show(Item $item)
+    public function show(Produce $produce)
     {
-        $item->load('produces.items');
-        return view('items.show', compact('item'));
+        $produce->load('items.produces');
+        return view('produces.show', compact('produce'));
     }
 }
