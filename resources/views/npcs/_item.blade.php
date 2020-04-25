@@ -16,7 +16,14 @@
     <div class="list-group-item">
       <div>喜好</div>
       @foreach ($npc->favorites as $favorite)
-      <a href="#" class="badge badge-success">{{ $favorite->name }}</a>
+      @if($favorite->name === '变身卡')
+      <div class="badge badge-secondary">{{ $favorite->name }}</div>
+      @elseif($favorite->name === '百花露')
+      <div class="badge badge-secondary">{{ $favorite->name }}</div>
+      @else
+      <a href="{{route('produces.show', ['produce' => $favorite->id])}}"
+        class="badge badge-success">{{ $favorite->name }}</a>
+      @endif
       @endforeach
     </div>
     <div class="list-group-item">
