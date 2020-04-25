@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
-@section('title', '物品图鉴')
+@section('title', '篝火派对')
 
 @section('content')
 
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
+    {{-- 搜索 --}}
     <div class="card my-2">
       <div class="card-header bg-transparent">
-        <form action="{{ route('barbecues.index') }}" method="GET" accept-charset="UTF-8">
+        <form action="{{ route('produces.barbecues') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
-            <input name="search" type="text" class="form-control" placeholder="输入需要查询的配方" aria-label=""
+            <input name="search" type="text" class="form-control" placeholder="输入需要查询的烧烤配方" aria-label=""
               value="{{request()->get('search', '')}}" aria-describedby="">
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit">搜索</button>
@@ -21,26 +22,13 @@
     </div>
 
     {{-- 无内容 --}}
-    @include('shared._404', ['items' => $barbecues])
+    @include('shared._404', ['items' => $produces])
 
     {{-- 内容 --}}
-    <div class="card-columns">
-      @foreach ($barbecues as $barbecue)
-      <div class="card">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div>{{ $barbecue->name }}</div>
-          </div>
-          <div class="list-group-item">
-            <div>配方</div>
-            @foreach ($barbecue->items as $item)
-            <div class="badge badge-success">{{ $item->name }}</div>
-            @endforeach
-          </div>
-        </div>
-      </div>
-      @endforeach
-    </div>
+    @include('produces._list', ['npcs' => $produces])
+
+    {{-- 分页 --}}
+    @include('shared._page', ['items' => $produces])
   </div>
 
   <div class="col-lg-3 col-md-3 sidebar mt-md-0 mt-sm-2">

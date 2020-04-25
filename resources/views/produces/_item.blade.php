@@ -8,7 +8,7 @@
     </div>
     <div class="list-group-item">
       @if(!count($produce->items))
-      <div class="badge badge-success">无</div>
+      <div class="badge badge-secondary">待补充</div>
       @endif
       @foreach ($produce->items as $item)
       <a href="{{route('items.show', ['item' => $item->id])}}" class="badge badge-success">{{ $item->name }}</a>
