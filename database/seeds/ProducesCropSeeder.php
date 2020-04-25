@@ -4,7 +4,7 @@ use App\Models\Item;
 use App\Models\Produce;
 use Illuminate\Database\Seeder;
 
-class ProducesAquaticSeeder extends Seeder
+class ProducesCropSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,9 +13,8 @@ class ProducesAquaticSeeder extends Seeder
      */
     public function run()
     {
-        $items = Item::where('category', '水产品')->get()->pluck('id')->toArray();
-        $produce = Produce::where('name', '水产品')->first();
-        $produce->items()->attach($items);
+        $items = Item::where('category', '农产品')->get()->pluck('id')->toArray();
+        $produce = Produce::where('name', '农产品')->first();
         $produce->items()->attach($items);
     }
 }

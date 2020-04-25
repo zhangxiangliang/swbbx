@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
         $this->call(MapsSeeder::class);
 
         // 物品数据
-        $this->call(ItemsAquaticSeeder::class);
         $this->call(ItemsGemSeeder::class);
-        $this->call(ItemsProduceSeeder::class);
+        $this->call(ItemsCropSeeder::class);
+        $this->call(ItemsAquaticSeeder::class);
 
         // 产物
         $this->call(ProducesBarbecueSeeder::class);
@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProducesGemSeeder::class);
         $this->call(ProducesAquaticSeeder::class);
         $this->call(ProducesLevelSeeder::class);
+        $this->call(ProducesCropSeeder::class);
 
         // NPC
         $this->call(NpcsSeeder::class);

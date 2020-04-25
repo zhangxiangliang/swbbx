@@ -27,7 +27,7 @@ class ProducesController extends Controller
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $produces = $query->paginate();
+        $produces = $query->whereNotIn('name', ["百花露", "变身卡"])->recent()->paginate();
 
         // 传参变量话题和分类到模板中
         return view('produces.index', compact('produces'));

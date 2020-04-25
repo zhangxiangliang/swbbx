@@ -556,7 +556,7 @@ class NpcsSeeder extends Seeder
                 "name" => "香客",
                 "cover" => "香客人物.png",
                 "relations" => ["掌柜", "戏院老板", "游客", "村长", "曾浩迟", "程府管家", "花狐狸", "刘举人"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "佛门",
                 "description" => "焚香者未必信佛，这位神秘的香客如今久居于佛门的厢房之中，虽每日佛理，但明眼人一眼就能看出他并无敬佛之心。他究竟有何目的，旁人无从得知。"
             ],
@@ -612,7 +612,7 @@ class NpcsSeeder extends Seeder
                 "name" => "慧心",
                 "cover" => "慧心人物.png",
                 "relations" => ["慧仁", "明月", "慧痴", "大慧禅师", "慧真", "明月", "善财童子", "玄弘"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "佛门",
                 "description" => "作为大慧禅师的关门弟子，慧心深受佛门众师兄的照顾。这个小和尚平时寡言少语，对认定的事情却异常执拗，在佛法上也有着极高的悟性。"
             ],
@@ -660,7 +660,7 @@ class NpcsSeeder extends Seeder
                 "name" => "慧痴",
                 "cover" => "慧痴人物.png",
                 "relations" => ["大慧禅师", "慧真", "慧心", "地藏菩萨", "明月", "慧仁", "孤魂", "玄弘", "通灵道人", "善财童子"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "佛门",
                 "description" => "独居佛门后山的疯和尚，不受戒律约束，举止似痴若狂，寺中众人避之唯恐不及，唯有大慧禅师对他嘉许有加。为避免他惊扰香客，大慧禅师让他在后山面壁思过、体悟佛法。"
             ],
@@ -740,7 +740,7 @@ class NpcsSeeder extends Seeder
                 "name" => "慧仁",
                 "cover" => "慧仁人物.png",
                 "relations" => ["大慧禅师", "慧真", "慧心", "御林军左统领", "奈良", "慧痴", "县令"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "佛门",
                 "description" => "慧仁现居佛门，跟随师父修行，坊间传言慧仁本是江湖中人，因为感情纠葛，遁入空门。"
             ],
@@ -748,7 +748,7 @@ class NpcsSeeder extends Seeder
                 "name" => "慧真",
                 "cover" => "慧真人物.png",
                 "relations" => ["慧仁", "慧痴", "慧心", "大慧禅师"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "佛门",
                 "description" => "作为佛门首席后勤弟子，慧真每日的工作无法使打扫厢房、浇水种菜，有些碌碌无为。与之攀谈后才知慧真小师傅对佛法有着自己独到的理解。"
             ],
@@ -844,7 +844,7 @@ class NpcsSeeder extends Seeder
                 "name" => "玄弘",
                 "cover" => "玄弘人物.png",
                 "relations" => ["玄明", "护剑弟子", "何道长", "大觉金仙", "慧痴", "慧心", "明月", "善财童子"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "七星方寸",
                 "description" => "玄弘自小拜入七星方寸，不精修法术，却沉醉于道术典籍，出言无不引经据典，人人皆称其为“道痴”。"
             ],
@@ -852,7 +852,7 @@ class NpcsSeeder extends Seeder
                 "name" => "玄明",
                 "cover" => "玄明人物.png",
                 "relations" => ["护剑弟子", "玄弘", "大觉金仙", "袁飞", "何道长", "泽野", "吴朴智", "流浪艺人"],
-                "favorites" => ["素斋", "农作物"],
+                "favorites" => ["素斋", "农产品"],
                 "map" => "七星方寸",
                 "description" => "玄明本是一方显贵，后因家中变故导致厌弃世俗。他毅然散尽万贯家财，拜入七星方寸修道，过起了闲云野鹤般的生活。"
             ],
@@ -1044,7 +1044,6 @@ class NpcsSeeder extends Seeder
             $data = $items[$npc['name']]['favorites'];
 
             foreach($data as $key => $value) {
-                if ($value === '变身卡' || $value === '百花露') return;
                 $relations[$key] = $produces[$value]['id'];
             }
 
