@@ -29,6 +29,9 @@ class DatabaseSeeder extends Seeder
         // 产物
         $this->call(ProducesBarbecueSeeder::class);
         $this->call(ProducesFavoriteSeeder::class);
+        $this->call(ProducesGemSeeder::class);
+        $this->call(ProducesAquaticSeeder::class);
+        $this->call(ProducesLevelSeeder::class);
 
         // NPC
         $this->call(NpcsSeeder::class);

@@ -32,7 +32,7 @@ class ItemsGemSeeder extends Seeder
                 "level" => "一级",
                 "description" => "皓月之魄，内蕴至阴之气，以柔御万物",
                 "use" => "增加防御力12",
-                "maps" => ["任务活动奖励", "神武币交易中型"],
+                "maps" => ["任务活动奖励", "神武币交易中心"],
             ],
             [
                 "name" => "舍利子",

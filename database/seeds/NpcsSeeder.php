@@ -76,7 +76,7 @@ class NpcsSeeder extends Seeder
                 "name" => "渔夫",
                 "cover" => "渔夫人物.png",
                 "relations" => ["农夫", "衙役", "流浪艺人", "掌柜"],
-                "favorites" => ["鱼类"],
+                "favorites" => ["水产品"],
                 "map" => "野外",
                 "description" => "渔夫自小跟随爷爷在泾河边以打渔为生。他有个奇怪的习惯，每次捕鱼都要放掉所有小鱼和一半大鱼，绝不滥杀滥捕，足够度日即可。"
             ],
@@ -892,7 +892,7 @@ class NpcsSeeder extends Seeder
                 "name" => "龙王敖广",
                 "cover" => "龙王敖广人物.png",
                 "relations" => ["李世民", "玉皇大帝", "龙女", "龟千岁", "蟹兵", "幽蓝", "地藏菩萨", "蟹将军", "巡海鱼兵", "青壳蚌精", "鱼兵"],
-                "favorites" => ["古玩", "鱼类"],
+                "favorites" => ["古玩", "水产品"],
                 "map" => "东海龙宫",
                 "description" => "敖广是司雨之神，能够飞天遁地、呼风唤雨。为培养人才，他创立东海龙宫一派，将无上妙法倾囊想授，希望能够造福四海、泽被苍生。"
             ],
@@ -1044,6 +1044,7 @@ class NpcsSeeder extends Seeder
             $data = $items[$npc['name']]['favorites'];
 
             foreach($data as $key => $value) {
+                if ($value === '变身卡' || $value === '百花露') return;
                 $relations[$key] = $produces[$value]['id'];
             }
 

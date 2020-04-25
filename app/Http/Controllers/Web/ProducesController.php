@@ -21,7 +21,7 @@ class ProducesController extends Controller
     {
         $keywords = $request->get('search', '') === '' ? [] : explode(' ', $request->search);
 
-        $query = Produce::query();
+        $query = Produce::with('items');
 
         foreach ($keywords as $keyword) {
             $query->where('name', 'like', '%'. $keyword . '%');

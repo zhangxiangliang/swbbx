@@ -38,6 +38,7 @@ class MapsSeeder extends Seeder
             ["name" => "傲来国", "teacher_id" => 0, "intro" => "", "description" => ""],
             ["name" => "女儿国", "teacher_id" => 0, "intro" => "", "description" => ""],
             ["name" => "金銮殿", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "庭院", "teacher_id" => 0, "intro" => "", "description" => ""],
         ];
 
         Map::insert(collect($items)->map(function ($item) {

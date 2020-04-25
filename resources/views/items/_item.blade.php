@@ -8,11 +8,7 @@
     </div>
     <div class="list-group-item">
       <span class="badge badge-success">{{$item->level}}</span>
-      <span class="badge badge-success">{{$item->category}}</span>
-      @foreach($item->produces as $produce)
-      <a href="{{route('produces.show', ['produce' => $produce->id])}}"
-        class="badge badge-success">{{$produce->name}}</a>
-      @endforeach
+
       @foreach($item->maps as $map)
       <div class="badge badge-success">{{$map}}</div>
       @endforeach
@@ -23,5 +19,14 @@
     <div class="list-group-item">
       <div>作用: {{$item->use ? $item->use : '无'}}</div>
     </div>
+    @if(count($item->produces))
+    <div class="list-group-item">
+      <div>集合</div>
+      @foreach($item->produces as $produce)
+      <a href="{{route('produces.show', ['produce' => $produce->id])}}"
+        class="badge badge-success">{{$produce->name}}</a>
+      @endforeach
+    </div>
+    @endif
   </div>
 </div>
