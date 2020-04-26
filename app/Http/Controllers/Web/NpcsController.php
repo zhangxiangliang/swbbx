@@ -57,8 +57,10 @@ class NpcsController extends Controller
         $npc->load(
             'map', 'favorites',
             'friends.favorites', 'friends.friends', 'friends.map',
-            'baseSkills', 'mountSkills', 'flySkills'
+            'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
         );
+
+        $npc->superSkillsGroup = $npc->superSkills->groupBy('level');
         return view('npcs.show', compact('npc'));
     }
 }

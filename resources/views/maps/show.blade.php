@@ -52,6 +52,12 @@
             飞升技能 <span class="badge badge-light">{{count($map->flySkills)}}</span>
           </button>
           @endif
+
+          @if(count($map->superSkills))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#superSkills">
+            星穹技能 <span class="badge badge-light">{{count($map->superSkills)}}</span>
+          </button>
+          @endif
         </div>
         <div class="accordion-group">
           {{-- 导师信息 --}}
@@ -86,6 +92,13 @@
           @if($map->teacher && count($map->flySkills))
           <div class="collapse" id="flySkills" data-parent="#group">
             @include('skills._list', ['skills' => $map->flySkills])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if($map->teacher && count($map->superSkills))
+          <div class="collapse" id="superSkills" data-parent="#group">
+            @include('skills._super-list', ['skillsGroup' => $map->superSkillsGroup])
           </div>
           @endif
         </div>

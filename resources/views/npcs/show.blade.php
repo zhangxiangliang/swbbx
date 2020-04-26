@@ -51,6 +51,12 @@
             飞升技能 <span class="badge badge-light">{{count($npc->flySkills)}}</span>
           </button>
           @endif
+
+          @if(count($npc->superSkills))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#superSkills">
+            星穹技能 <span class="badge badge-light">{{count($npc->superSkills)}}</span>
+          </button>
+          @endif
         </div>
 
         <div class="accordion-group">
@@ -86,6 +92,13 @@
           @if(count($npc->flySkills))
           <div class="collapse" id="flySkills" data-parent="#group">
             @include('skills._list', ['skills' => $npc->flySkills])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if(count($npc->superSkills))
+          <div class="collapse" id="superSkills" data-parent="#group">
+            @include('skills._super-list', ['skillsGroup' => $npc->superSkillsGroup])
           </div>
           @endif
         </div>

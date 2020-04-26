@@ -19,7 +19,7 @@ class MapsController extends Controller
      */
     public function index()
     {
-        $maps = Map::paginate(13);
+        $maps = Map::paginate(15);
 
         return view('maps.index', compact('maps'));
     }
@@ -33,10 +33,11 @@ class MapsController extends Controller
     public function show(Map $map)
     {
         $map->load(
-            'teacher', 'npcs.favorites', 'npcs.friends',
-            'npcs.map', 'baseSkills', 'mountSkills', 'flySkills'
+            'teacher', 'npcs.favorites', 'npcs.friends', 'npcs.map',
+            'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
         );
 
+        $map->superSkillsGroup = $map->superSkills->groupBy('level');
         return view('maps.show', compact('map'));
     }
 }

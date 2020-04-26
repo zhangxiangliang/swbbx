@@ -28,4 +28,9 @@ class Map extends Model
     {
         return $this->hasMany(Skill::class)->where('skills.type', 'fly');
     }
+
+    public function superSkills()
+    {
+        return $this->hasMany(Skill::class)->where('skills.type', 'super');
+    }
 }
