@@ -41,8 +41,9 @@ class DatabaseSeeder extends Seeder
         $this->call(MapsTeacherSeeder::class);
 
         // 门派技能
-        $this->call(SkillTianceBaseSeeder::class);
-        $this->call(SkillTianceMountSeeder::class);
+        $this->call(SkillsTianceFlySeeder::class);
+        $this->call(SkillsTianceBaseSeeder::class);
+        $this->call(SkillsTianceMountSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);

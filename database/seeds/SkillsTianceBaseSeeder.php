@@ -6,7 +6,7 @@ use App\Models\Skill;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 
-class SkillTianceBaseSeeder extends Seeder
+class SkillsTianceBaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
