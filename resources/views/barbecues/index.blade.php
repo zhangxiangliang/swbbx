@@ -9,7 +9,7 @@
     {{-- 搜索 --}}
     <div class="card my-2">
       <div class="card-header bg-transparent">
-        <form action="{{ route('produces.barbecues') }}" method="GET" accept-charset="UTF-8">
+        <form action="{{ route('barbecues.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
             <input name="search" type="text" class="form-control" placeholder="输入需要查询的烧烤配方" aria-label=""
               value="{{request()->get('search', '')}}" aria-describedby="">
