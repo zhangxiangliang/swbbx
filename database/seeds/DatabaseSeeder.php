@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsTianceFlySeeder::class);
         $this->call(SkillsTianceBaseSeeder::class);
         $this->call(SkillsTianceMountSeeder::class);
+        $this->call(SkillsTianceSuperSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
