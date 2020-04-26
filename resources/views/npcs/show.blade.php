@@ -45,6 +45,12 @@
             御魂技能 <span class="badge badge-light">{{count($npc->mountSkills)}}</span>
           </button>
           @endif
+
+          @if(count($npc->flySkills))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#flySkills">
+            飞升技能 <span class="badge badge-light">{{count($npc->flySkills)}}</span>
+          </button>
+          @endif
         </div>
 
         <div class="accordion-group">
@@ -73,6 +79,13 @@
           @if(count($npc->mountSkills))
           <div class="collapse" id="mountSkills" data-parent="#group">
             @include('skills._list', ['skills' => $npc->mountSkills])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if(count($npc->flySkills))
+          <div class="collapse" id="flySkills" data-parent="#group">
+            @include('skills._list', ['skills' => $npc->flySkills])
           </div>
           @endif
         </div>

@@ -32,7 +32,11 @@ class MapsController extends Controller
      */
     public function show(Map $map)
     {
-        $map->load('teacher', 'npcs.favorites', 'npcs.friends', 'npcs.map', 'baseSkills', 'mountSkills');
+        $map->load(
+            'teacher', 'npcs.favorites', 'npcs.friends',
+            'npcs.map', 'baseSkills', 'mountSkills', 'flySkills'
+        );
+
         return view('maps.show', compact('map'));
     }
 }

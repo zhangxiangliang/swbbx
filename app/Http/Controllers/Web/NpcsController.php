@@ -54,7 +54,11 @@ class NpcsController extends Controller
      */
     public function show(Npc $npc)
     {
-        $npc->load('map', 'favorites', 'friends.favorites', 'friends.friends', 'friends.map', 'baseSkills', 'mountSkills');
+        $npc->load(
+            'map', 'favorites',
+            'friends.favorites', 'friends.friends', 'friends.map',
+            'baseSkills', 'mountSkills', 'flySkills'
+        );
         return view('npcs.show', compact('npc'));
     }
 }

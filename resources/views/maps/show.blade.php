@@ -46,6 +46,12 @@
             御魂技能 <span class="badge badge-light">{{count($map->mountSkills)}}</span>
           </button>
           @endif
+
+          @if($map->teacher && count($map->flySkills))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#flySkills">
+            飞升技能 <span class="badge badge-light">{{count($map->flySkills)}}</span>
+          </button>
+          @endif
         </div>
         <div class="accordion-group">
           {{-- 导师信息 --}}
@@ -73,6 +79,13 @@
           @if($map->teacher && count($map->mountSkills))
           <div class="collapse" id="mountSkills" data-parent="#group">
             @include('skills._list', ['skills' => $map->mountSkills])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if($map->teacher && count($map->flySkills))
+          <div class="collapse" id="flySkills" data-parent="#group">
+            @include('skills._list', ['skills' => $map->flySkills])
           </div>
           @endif
         </div>

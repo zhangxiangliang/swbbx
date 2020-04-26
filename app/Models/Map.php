@@ -23,4 +23,9 @@ class Map extends Model
     {
         return $this->hasMany(Skill::class)->where('skills.type', 'mount');
     }
+
+    public function flySkills()
+    {
+        return $this->hasMany(Skill::class)->where('skills.type', 'fly');
+    }
 }
