@@ -58,6 +58,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsWuzhuangFlySeeder::class);
         $this->call(SkillsWuzhuangSuperSeeder::class);
 
+        // 万兽技能
+        $this->call(SkillsWanshouBaseSeeder::class);
+        $this->call(SkillsWanshouMountSeeder::class);
+        $this->call(SkillsWanshouFlySeeder::class);
+        $this->call(SkillsWanshouSuperSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
