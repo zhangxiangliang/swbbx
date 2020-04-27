@@ -40,11 +40,17 @@ class DatabaseSeeder extends Seeder
         // 导师
         $this->call(MapsTeacherSeeder::class);
 
-        // 门派技能
+        // 天策技能
         $this->call(SkillsTianceFlySeeder::class);
         $this->call(SkillsTianceBaseSeeder::class);
         $this->call(SkillsTianceMountSeeder::class);
         $this->call(SkillsTianceSuperSeeder::class);
+
+        // 地府技能
+        $this->call(SkillsDifuBaseSeeder::class);
+        $this->call(SkillsDifuMountSeeder::class);
+        $this->call(SkillsDifuFlySeeder::class);
+        $this->call(SkillsDifuSuperSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
