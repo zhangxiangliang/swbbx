@@ -47,10 +47,16 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsTianceSuperSeeder::class);
 
         // 地府技能
-        $this->call(SkillsDifuBaseSeeder::class);
+        $this->call(SkillsWuzhuangBaseSeeder::class);
         $this->call(SkillsDifuMountSeeder::class);
         $this->call(SkillsDifuFlySeeder::class);
         $this->call(SkillsDifuSuperSeeder::class);
+
+        // 五庄技能
+        $this->call(SkillsWuzhuangBaseSeeder::class);
+        $this->call(SkillsWuzhuangMountSeeder::class);
+        $this->call(SkillsWuzhuangFlySeeder::class);
+        $this->call(SkillsWuzhuangSuperSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
