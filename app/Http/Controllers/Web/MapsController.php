@@ -37,7 +37,10 @@ class MapsController extends Controller
             'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
         );
 
-        $map->superSkillsGroup = $map->superSkills->groupBy('level');
+        $map->superSkillsGroup = $map->superSkills->map(function ($item) {
+            $item->group = explode('·', $item['name'])[0];
+            return $item;
+        })->groupBy('group');
         return view('maps.show', compact('map'));
     }
 }

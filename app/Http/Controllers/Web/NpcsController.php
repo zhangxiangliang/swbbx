@@ -60,7 +60,10 @@ class NpcsController extends Controller
             'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
         );
 
-        $npc->superSkillsGroup = $npc->superSkills->groupBy('level');
+        $npc->superSkillsGroup = $npc->superSkills->map(function ($item) {
+            $item->group = explode('·', $item['name'])[0];
+            return $item;
+        })->groupBy('group');
         return view('npcs.show', compact('npc'));
     }
 }
