@@ -70,6 +70,14 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsFomenFlySeeder::class);
         $this->call(SkillsFomenSuperSeeder::class);
 
+        // 方寸技能
+        $this->call(SkillsFangcunBaseSeeder::class);
+        $this->call(SkillsFangcunMountSeeder::class);
+        $this->call(SkillsFangcunFlySeeder::class);
+        $this->call(SkillsFangcunSuperSeeder::class);
+
+        // 无名谷
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
