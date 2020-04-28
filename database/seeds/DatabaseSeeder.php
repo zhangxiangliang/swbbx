@@ -88,6 +88,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsMowangFlySeeder::class);
         $this->call(SkillsMowangSuperSeeder::class);
 
+        // 天宫技能
+        $this->call(SkillsTiangongBaseSeeder::class);
+        $this->call(SkillsTiangongMountSeeder::class);
+        $this->call(SkillsTiangongFlySeeder::class);
+        $this->call(SkillsTiangongSuperSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
