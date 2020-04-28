@@ -41,9 +41,9 @@ class DatabaseSeeder extends Seeder
         $this->call(MapsTeacherSeeder::class);
 
         // 天策技能
-        $this->call(SkillsTianceFlySeeder::class);
         $this->call(SkillsTianceBaseSeeder::class);
         $this->call(SkillsTianceMountSeeder::class);
+        $this->call(SkillsTianceFlySeeder::class);
         $this->call(SkillsTianceSuperSeeder::class);
 
         // 地府技能
@@ -76,11 +76,17 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsFangcunFlySeeder::class);
         $this->call(SkillsFangcunSuperSeeder::class);
 
-        // 无名谷
+        // 无名谷技能
         $this->call(SkillsWumingBaseSeeder::class);
         $this->call(SkillsWumingMountSeeder::class);
-        $this->call(SkillsWumingSuperSeeder::class);
         $this->call(SkillsWumingFlySeeder::class);
+        $this->call(SkillsWumingSuperSeeder::class);
+
+        // 魔王技能
+        $this->call(SkillsMowangBaseSeeder::class);
+        $this->call(SkillsMowangMountSeeder::class);
+        $this->call(SkillsMowangFlySeeder::class);
+        $this->call(SkillsMowangSuperSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
