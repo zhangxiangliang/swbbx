@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsTianceSuperSeeder::class);
 
         // 地府技能
-        $this->call(SkillsWuzhuangBaseSeeder::class);
+        $this->call(SkillsDifuBaseSeeder::class);
         $this->call(SkillsDifuMountSeeder::class);
         $this->call(SkillsDifuFlySeeder::class);
         $this->call(SkillsDifuSuperSeeder::class);
@@ -63,6 +63,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsWanshouMountSeeder::class);
         $this->call(SkillsWanshouFlySeeder::class);
         $this->call(SkillsWanshouSuperSeeder::class);
+
+        // 佛门技能
+        $this->call(SkillsFomenBaseSeeder::class);
+        $this->call(SkillsFomenMountSeeder::class);
+        $this->call(SkillsFomenFlySeeder::class);
+        $this->call(SkillsFomenSuperSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
