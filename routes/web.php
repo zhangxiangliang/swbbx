@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Web'], function () {
     // 物品相关
     Route::get('items', 'ItemsController@index')->name('items.index');
     Route::get('items/{item}', 'ItemsController@show')->name('items.show');
+    Route::get('fishes', 'FishesController@index')->name('fishes.index');
 
     // 集合相关
     Route::get('produces', 'ProducesController@index')->name('produces.index');
