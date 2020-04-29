@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsFangcunFlySeeder::class);
         $this->call(SkillsFangcunSuperSeeder::class);
 
-        // 无名谷技能
+        // 无名技能
         $this->call(SkillsWumingBaseSeeder::class);
         $this->call(SkillsWumingMountSeeder::class);
         $this->call(SkillsWumingFlySeeder::class);
@@ -100,11 +100,17 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsPansiFlySeeder::class);
         $this->call(SkillsPansiSuperSeeder::class);
 
-        // 天魔里
+        // 天魔技能
         $this->call(SkillsTianmoBaseSeeder::class);
         $this->call(SkillsTianmoMountSeeder::class);
         $this->call(SkillsTianmoFlySeeder::class);
         $this->call(SkillsTianmoSuperSeeder::class);
+
+        // 普陀技能
+        $this->call(SkillsPutuoBaseSeeder::class);
+        $this->call(SkillsPutuoMountSeeder::class);
+        $this->call(SkillsPutuoFlySeeder::class);
+        $this->call(SkillsPutuoSuperSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
