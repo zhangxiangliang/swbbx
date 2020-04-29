@@ -16,6 +16,5 @@ class ProducesAquaticSeeder extends Seeder
         $items = Item::where('category', '水产品')->get()->pluck('id')->toArray();
         $produce = Produce::where('name', '水产品')->first();
         $produce->items()->attach($items);
-        $produce->items()->attach($items);
     }
 }

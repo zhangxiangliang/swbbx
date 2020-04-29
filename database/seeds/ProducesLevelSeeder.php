@@ -15,16 +15,17 @@ class ProducesLevelSeeder extends Seeder
     public function run()
     {
         $items = [
-            ['name' => '零级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '一级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '二级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '三级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '四级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '五级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '六级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '七级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '八级集合', 'category' => '等级', 'items' => [] ],
-            ['name' => '九级集合', 'category' => '等级', 'items' => [] ],
+            ['name' => '零级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '一级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '二级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '三级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '四级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '五级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '六级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '七级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '八级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '九级物品', 'category' => '物品等级', 'items' => [] ],
+            ['name' => '十级物品', 'category' => '物品等级', 'items' => [] ],
         ];
 
         Produce::insert(collect($items)->map(function ($item) {
@@ -36,7 +37,7 @@ class ProducesLevelSeeder extends Seeder
         })->toArray());
 
         collect($items)->map(function ($item) {
-            $level = str_replace('集合', '', $item['name']);
+            $level = str_replace('物品', '', $item['name']);
             $items = Item::where('level', $level)->get()->pluck('id')->toArray();
             $produce = Produce::where('name', $item['name'])->first();
             $produce->items()->attach($items);
