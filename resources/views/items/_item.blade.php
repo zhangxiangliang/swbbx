@@ -17,7 +17,7 @@
     <div class="list-group-item">
       <div>出处</div>
       @foreach($item->maps as $map)
-      <div class="badge badge-success">{{$map}}</div>
+      <div class="badge badge-secondary">{{$map}}</div>
       @endforeach
     </div>
     @endif
