@@ -100,6 +100,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsPansiFlySeeder::class);
         $this->call(SkillsPansiSuperSeeder::class);
 
+        // 天魔里
+        $this->call(SkillsTianmoBaseSeeder::class);
+        $this->call(SkillsTianmoMountSeeder::class);
+        $this->call(SkillsTianmoFlySeeder::class);
+        $this->call(SkillsTianmoSuperSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
