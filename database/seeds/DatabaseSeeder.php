@@ -94,6 +94,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsTiangongFlySeeder::class);
         $this->call(SkillsTiangongSuperSeeder::class);
 
+        // 盘丝技能
+        $this->call(SkillsPansiBaseSeeder::class);
+        $this->call(SkillsPansiMountSeeder::class);
+        $this->call(SkillsPansiFlySeeder::class);
+        $this->call(SkillsPansiSuperSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
