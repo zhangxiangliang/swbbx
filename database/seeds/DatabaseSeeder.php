@@ -118,6 +118,10 @@ class DatabaseSeeder extends Seeder
         $this->call(SkillsLonggongFlySeeder::class);
         $this->call(SkillsLonggongSuperSeeder::class);
 
+        // 经验技能
+        $this->call(ExperiencesLevelSeeder::class);
+        $this->call(ExperiencesSkillSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
