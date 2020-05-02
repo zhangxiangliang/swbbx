@@ -25,10 +25,10 @@ class ToolsController extends Controller
             (object)['title' => '装备图鉴', 'description' => '属性特效特技', 'category' => '图鉴', 'route' => ''],
 
             // 计算器
+            (object)['title' => '经验计算器', 'description' => '卡级突破不落下', 'category' => '计算器', 'route' => route('experiences.index')],
             (object)['title' => '元宵计算器', 'description' => '元宵颗颗不浪费', 'category' => '计算器', 'route' => ''],
             (object)['title' => '属性计算器', 'description' => '宠物属性轻松算', 'category' => '计算器', 'route' => ''],
             (object)['title' => '修炼计算器', 'description' => '羽化登仙有你我', 'category' => '计算器', 'route' => ''],
-            (object)['title' => '经验计算器', 'description' => '卡级突破不落下', 'category' => '计算器', 'route' => ''],
             (object)['title' => '宝石计算器', 'description' => '宝石计算与图鉴', 'category' => '计算器', 'route' => ''],
 
             // 攻略
