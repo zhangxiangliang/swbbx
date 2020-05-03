@@ -30,8 +30,13 @@
       <div class="card">
         <div class="list-group list-group-flush">
           <div class="list-group-item">
-            <div>{{ $server->name }}</div>
-            <div>{{ $server->birthday->format('Y-m-d') }}</div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <div>{{ $server->name }}</div>
+                <div>{{ $server->birthday->format('Y-m-d') }}</div>
+              </div>
+              <div class="badge badge-secondary">开服 {{ $server->birthday->diff()->days }} 天</div>
+            </div>
           </div>
           @if($server->pid === 0)
           <div class="list-group-item">

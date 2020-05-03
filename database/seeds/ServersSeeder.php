@@ -14,6 +14,7 @@ class ServersSeeder extends Seeder
     public function run()
     {
         $servers = [
+            ["name" => "浪淘沙", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2020-05-01"],
             ["name" => "海纳百川", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2019-11-08"],
             ["name" => "一见如故", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2019-10-25"],
             ["name" => "声名鹊起", "level" => 0, "pid" => 0, "role_count" => 0, "birthday" => "2019-10-11"],
