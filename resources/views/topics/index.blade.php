@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
-    <div class="card mt-2">
+    <div class="card mb-2">
       <div class="card-header bg-transparent">
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="list-group mt-2">
+    <div class="list-group">
       {{-- 话题列表 --}}
       @include('topics._topic_list', ['topics' => $topics])
       {{-- 分页 --}}

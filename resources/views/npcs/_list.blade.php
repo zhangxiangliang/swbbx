@@ -1,4 +1,4 @@
-<div class="card-columns">
+<div class="masonry">
   @foreach ($npcs as $npc)
   @include('npcs._item', ['npc' => $npc])
   @endforeach

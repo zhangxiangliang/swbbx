@@ -1,4 +1,4 @@
-<div class="card-columns">
+<div class="masonry">
   @foreach ($skills as $skill)
   @include('skills._item', ['skill' => $skill])
   @endforeach

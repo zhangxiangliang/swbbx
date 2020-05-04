@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 搜索 --}}
-    <div class="card my-2">
+    <div class="card mb-2">
       <div class="card-header bg-transparent">
         <form action="{{ route('questions.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
@@ -25,23 +25,7 @@
     @include('shared._404', ['items' => $questions])
 
     {{-- 内容 --}}
-    <div class="card-columns">
-      @foreach ($questions as $item)
-      <div class="card">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <span class="badge badge-success">{{$item->category}}</span>
-          </div>
-          <div class="list-group-item">
-            问题: {{ $item->question }}
-          </div>
-          <div class="list-group-item">
-            答案: {{ $item->answer }}
-          </div>
-        </div>
-      </div>
-      @endforeach
-    </div>
+    @include('questions._list', ['questions' => $questions])
 
     {{-- 分页 --}}
     @if($questions->lastPage() > 1)
