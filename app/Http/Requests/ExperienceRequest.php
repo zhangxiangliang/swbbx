@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class QuestionRequest extends Request
+class ExperienceRequest extends Request
 {
     public function authorize()
     {
@@ -15,19 +15,9 @@ class QuestionRequest extends Request
         {
             // CREATE
             case 'POST':
-            {
-                return [
-                    // CREATE ROLES
-                ];
-            }
             // UPDATE
             case 'PUT':
             case 'PATCH':
-            {
-                return [
-                    // UPDATE ROLES
-                ];
-            }
             case 'GET':
             case 'DELETE':
             default:
@@ -40,7 +30,7 @@ class QuestionRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+
         ];
     }
 }

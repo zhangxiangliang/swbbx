@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 class TopicRequest extends Request
 {
+    public function authorize()
+    {
+        return true;
+    }
+
     public function rules()
     {
         switch($this->method())
