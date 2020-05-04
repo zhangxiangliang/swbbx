@@ -8,21 +8,23 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 操作相关 --}}
-    <form action="{{ route('questions.index') }}" method="GET" accept-charset="UTF-8">
+    <form action="{{ route('experiences.index') }}" method="GET" accept-charset="UTF-8">
       <div class="row mb-2">
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-6">
           <div class="card">
+            <div class="card-header">
+              人物经验相关
+            </div>
             <div class="list-group list-group-flush">
               <div class="list-group-item">
-                人物等级相关
-              </div>
-              <div class="list-group-item">
                 <div class="input-group">
-                  <input name='start_level' type="text" class="form-control" placeholder="输入当前等级">
+                  <input name='start_level' type="number" class="form-control" placeholder="输入当前等级"
+                    value="{{request()->get('start_level', '')}}">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <div class="custom-control custom-switch">
                         <input name='start_level_is_fly' type="checkbox" class="custom-control-input"
+                          {{request()->get('start_level_is_fly', '') ? 'checked' : ''}} value="true"
                           id="start_level_is_fly">
                         <label class="custom-control-label" for="start_level_is_fly">是否飞升</label>
                       </div>
@@ -33,11 +35,13 @@
 
               <div class="list-group-item">
                 <div class="input-group">
-                  <input name='end_level' type="text" class="form-control" placeholder="输入目标等级">
+                  <input name='end_level' type="number" class="form-control" placeholder="输入目标等级"
+                    value="{{request()->get('end_level', '')}}">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <div class="custom-control custom-switch">
                         <input name='end_level_is_fly' type="checkbox" class="custom-control-input"
+                          {{request()->get('end_level_is_fly', '') ? 'checked' : ''}} value="true"
                           id="end_level_is_fly">
                         <label class="custom-control-label" for="end_level_is_fly">是否飞升</label>
                       </div>
@@ -48,11 +52,13 @@
 
               <div class="list-group-item">
                 <div class="input-group">
-                  <input name='server_level' type="text" class="form-control" placeholder="输入服务器等级">
+                  <input name='server_level' type="number" class="form-control" placeholder="输入服务器等级"
+                    value="{{request()->get('server_level', '')}}">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <div class="custom-control custom-switch">
                         <input name='server_level_is_break' type="checkbox" class="custom-control-input"
+                          {{request()->get('server_level_is_break', '') ? 'checked' : ''}} value="true"
                           id="server_level_is_break">
                         <label class="custom-control-label" for="server_level_is_break">是否突破</label>
                       </div>
@@ -64,20 +70,21 @@
           </div>
         </div>
 
-        <div class="col-md-6 mt-sm-2 mt-md-0">
-
+        <div class="col-sm-12 col-md-6 mt-sm-2 mt-md-0">
           <div class="card">
+            <div class="card-header">
+              技能经验相关
+            </div>
             <div class="list-group list-group-flush">
               <div class="list-group-item">
-                人物经验相关
-              </div>
-              <div class="list-group-item">
                 <div class="input-group">
-                  <input name='start_skill' type="text" class="form-control" placeholder="输入当前技能等级">
-                  <div class="input-group-append">
+                  <input name='start_skill' type="number" class="form-control" placeholder="输入当前技能等级"
+                    value="{{request()->get('start_skill', '')}}">
+                  <div class=" input-group-append">
                     <div class="input-group-text">
                       <div class="custom-control custom-switch">
                         <input name='start_skill_is_fly' type="checkbox" class="custom-control-input"
+                          {{request()->get('start_skill_is_fly', '') ? 'checked' : ''}} value="true"
                           id="start_skill_is_fly">
                         <label class="custom-control-label" for="start_skill_is_fly">是否飞升</label>
                       </div>
@@ -88,11 +95,13 @@
 
               <div class="list-group-item">
                 <div class="input-group">
-                  <input name='end_skill' type="text" class="form-control" placeholder="输入目标技能等级">
+                  <input name='end_skill' type="number" class="form-control" placeholder="输入目标技能等级"
+                    value="{{request()->get('end_skill', '')}}">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <div class="custom-control custom-switch">
                         <input name='end_skill_is_fly' type="checkbox" class="custom-control-input"
+                          {{request()->get('end_skill_is_fly', '') ? 'checked' : ''}} value="true"
                           id="end_skill_is_fly">
                         <label class="custom-control-label" for="end_skill_is_fly">是否飞升</label>
                       </div>
@@ -103,13 +112,15 @@
 
               <div class="list-group-item">
                 <div class="input-group">
-                  <input name='total_skill' type="text" class="form-control" placeholder="输入目标技能数目">
+                  <input name='total_skill' type="number" class="form-control" placeholder="输入目标技能数目"
+                    value="{{request()->get('total_skill', '')}}">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <div class="custom-control custom-switch">
-                        <input name='total_skill_is_larger' type="checkbox" class="custom-control-input"
-                          id="total_skill_is_larger">
-                        <label class="custom-control-label" for="total_skill_is_larger">是否满技</label>
+                        <input name='total_skill_is_max' type="checkbox" class="custom-control-input"
+                          {{request()->get('total_skill_is_max', '') ? 'checked' : ''}} value="true"
+                          id="total_skill_is_max">
+                        <label class="custom-control-label" for="total_skill_is_max">是否满技</label>
                       </div>
                     </div>
                   </div>
@@ -118,79 +129,156 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 mt-2">
+      <div class="row mb-2">
+        <div class="col-sm-12 col-md-4">
           <div class="card">
+            <div class="card-header">
+              人物花费总计
+            </div>
             <div class="list-group list-group-flush">
               <div class="list-group-item">
-                计算结果
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>当前等级</div>
+                  <div>
+                    {{$total['level']['start']}}级{{$total['level']['start_is_fly'] ? '飞升' : ''}}
+                  </div>
+                </div>
               </div>
               <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>目标等级</div>
+                  <div>
+                    {{$total['level']['end']}}级{{$total['level']['end_is_fly'] ? '飞升' : ''}}
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>所需经验</div>
+                  <div>
+                    {{$total['level']['experience']}} 经验
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="card">
+            <div class="card-header">
+              增加 {{$total['skill']['total']}} 个技能总计
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>当前等级</div>
+                  <div>
+                    {{$total['skill']['start']}}级{{$total['skill']['start_is_fly'] ? '飞升' : ''}}
+                    到
+                    {{$total['skill']['end']}}级{{$total['skill']['end_is_fly'] ? '飞升' : ''}}
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>所需信誉</div>
+                  <div>
+                    {{$total['skill']['cost']}} 信誉
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>所需经验</div>
+                  <div>
+                    {{$total['skill']['experience']}} 经验
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="card">
+            <div class="card-header">
+              总计
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>所需信誉</div>
+                  <div>
+                    {{$total['total']['cost']}} 信誉
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>所需经验</div>
+                  <div>
+                    {{$total['total']['experience']}} 经验
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item">
                 <div class="input-group">
-                  <button type="button" class="btn btn-primary btn-lg btn-block">确认计算</button>
+                  <button type="submit" class="btn btn-primary btn-sm btn-block">确认计算</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </form>
 
-    <div class="row">
-      <div class="col-md-6">
-        <h2>人物经验表</h2>
-        <div class="card">
-          <table class="table mb-0 text-center">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">当前等级</th>
-                <th scope="col">所需经验</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($levels as $level)
-              <tr>
-                <td>
-                  {{$level->level}}级
-                  @if($level->sort > 130)
-                  <span class="badge badge-success">飞升</span>
-                  @endif
-                </td>
-                <td>{{$level->experience}}</td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-        </div>
+    <div id="group">
+      <div class="accordion-header">
+        @if($levels)
+        <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#levels">
+          等级经验 <span class="badge badge-light">{{count($levels)}}</span>
+        </button>
+        @endif
+
+        @if($skills)
+        <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#skills">
+          技能经验 <span class="badge badge-light">{{count($skills)}}</span>
+        </button>
+        @endif
       </div>
 
-      <div class="col-md-6 mt-sm-2 mt-md-0">
-        <h2>技能经验表</h2>
-        <div class="card">
-          <table class="table mb-0 text-center">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">当前等级</th>
-                <th scope="col">所需经验</th>
-                <th scope="col">所需信誉</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($skills as $skill)
-              <tr>
-                <td>
-                  {{$skill->level}}级
-                  @if($skill->sort > 135)
-                  <span class="badge badge-success">飞升</span>
-                  @endif
-                </td>
-                <td>{{$skill->experience}}</td>
-                <td>{{$skill->cost}}</td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
+      <div class="accordion-group">
+        {{-- 集合信息 --}}
+        @if($levels)
+        <div class="collapse" id="levels" data-parent="#group">
+          @include('experiences._level-list', ['levels' => $levels])
+
+          {{-- 无内容 --}}
+          @if(count($levels) === 0)
+          @include('shared._404', ['items' => null])
+          @endif
         </div>
+        @endif
+
+        {{-- 集合信息 --}}
+        @if($skills)
+        <div class="collapse" id="skills" data-parent="#group">
+          @include('experiences._skill-list', ['skills' => $skills])
+
+          {{-- 无内容 --}}
+          @if(count($skills) === 0)
+          @include('shared._404', ['items' => null])
+          @endif
+        </div>
+        @endif
       </div>
     </div>
   </div>
@@ -201,3 +289,10 @@
 </div>
 
 @endsection
+
+@section('scripts')
+<script>
+  masonry('.masonry', 2);
+
+</script>
+@stop
