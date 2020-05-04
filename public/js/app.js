@@ -37126,10 +37126,13 @@ var Macy = __webpack_require__(/*! macy */ "./node_modules/macy/dist/macy.js");
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
-function init() {
-  if ($('.masonry').length) {
+window.masonry = function init() {
+  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '.masonry';
+  var number = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
+
+  if ($(name).length) {
     new Macy({
-      container: '.masonry',
+      container: name,
       trueOrder: false,
       waitForImages: false,
       useOwnImageLoader: false,
@@ -37141,17 +37144,19 @@ function init() {
         x: '2%'
       },
       breakAt: {
-        1200: 3,
-        940: 3,
+        1200: number,
+        940: number,
         520: 1,
         400: 1
       }
     });
   }
-}
+};
 
-init();
-$('.collapse').on('show.bs.collapse', init);
+masonry();
+$('.collapse').on('show.bs.collapse', function (event) {
+  masonry(".masonry-".concat(event.target.id));
+});
 
 /***/ }),
 

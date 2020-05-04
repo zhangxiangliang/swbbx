@@ -1,10 +1,10 @@
 const Macy = require('macy');
 const $ = require('jquery');
 
-function init() {
-  if ($('.masonry').length) {
+window.masonry = function init(name = '.masonry', number = 3) {
+  if ($(name).length) {
     new Macy({
-      container: '.masonry',
+      container: name,
       trueOrder: false,
       waitForImages: false,
       useOwnImageLoader: false,
@@ -16,8 +16,8 @@ function init() {
         x: '2%',
       },
       breakAt: {
-        1200: 3,
-        940: 3,
+        1200: number,
+        940: number,
         520: 1,
         400: 1
       },
@@ -25,5 +25,7 @@ function init() {
   }
 }
 
-init();
-$('.collapse').on('show.bs.collapse', init)
+masonry();
+$('.collapse').on('show.bs.collapse', function (event) {
+  masonry(`.masonry-${event.target.id}`);
+});
