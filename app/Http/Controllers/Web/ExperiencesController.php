@@ -26,19 +26,19 @@ class ExperiencesController extends Controller
         $skills = SkillExperience::all();
 
         // 人物经验
-        $startLevel = $request->get("start_level", 0);
+        $startLevel = intval($request->get("start_level", 0));
         $startLevelIsFly = boolval($request->get("start_level_is_fly", false));
-        $endLevel = $request->get("end_level", 0);
+        $endLevel = intval($request->get("end_level", 0));
         $endLevelIsFly = boolval($request->get("end_level_is_fly", false));
-        $serverLevel = $request->get("server_level", 0);
+        $serverLevel = intval($request->get("server_level", 0));
         $serverLevelIsBreak = boolval($request->get("server_level_is_break", false));
 
         // 技能经验
-        $startSkill = $request->get("start_skill", 0);
+        $startSkill = intval($request->get("start_skill", 0));
         $startSkillIsFly = boolval($request->get("start_skill_is_fly", false));
-        $endSkill = $request->get("end_skill", 0);
+        $endSkill = intval($request->get("end_skill", 0));
         $endSkillIsFly = boolval($request->get("end_skill_is_fly", false));
-        $totalSkill = $request->get("total_skill", 0);
+        $totalSkill = intval($request->get("total_skill", 0));
         $totalSkillIsMax = boolval($request->get("total_skill_is_max", false));
 
         // 人物经验相关
@@ -53,7 +53,9 @@ class ExperiencesController extends Controller
         $levelTotal = $startLevelSort < $endLevelSort && $startLevelSort !== 0
             ? $levels->reduce(function ($carry, $item) use ($startLevelSort, $endLevelSort) {
                 return $startLevelSort <= $item->sort && $item->sort < $endLevelSort
-                    ? $carry + $item->experience
+                    ? $carry + $item->experience + collect($item->star)->reduce(function ($carry, $item) {
+                        return $carry + $item;
+                    })
                     : $carry;
             }, 0)
             : 0;
