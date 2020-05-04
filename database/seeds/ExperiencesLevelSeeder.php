@@ -666,7 +666,7 @@ class ExperiencesLevelSeeder extends Seeder
             ],
             [
                 "level" => 120,
-                "experience" => 30967527,
+                "experience" => 18626448,
                 "star" => [],
             ],
             [
