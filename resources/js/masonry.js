@@ -27,5 +27,6 @@ window.masonry = function init(name = '.masonry', number = 3) {
 
 masonry();
 $('.collapse').on('show.bs.collapse', function (event) {
+  masonry();
   masonry(`.masonry-${event.target.id}`);
 });

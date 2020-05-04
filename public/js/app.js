@@ -37155,6 +37155,7 @@ window.masonry = function init() {
 
 masonry();
 $('.collapse').on('show.bs.collapse', function (event) {
+  masonry();
   masonry(".masonry-".concat(event.target.id));
 });
 
