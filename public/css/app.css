@@ -17571,3 +17571,9 @@ p {
   color: #b3b3b3;
 }
 
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #00B5AE;
+  background-color: #00B5AE;
+}
+
