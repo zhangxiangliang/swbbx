@@ -1,7 +1,7 @@
 const Macy = require('macy');
 const $ = require('jquery');
 
-window.masonry = function init(name = '.masonry', number = 3) {
+window.masonry = function init(name = '.masonry', breakAtOne = 3, breakAtTwo = 3, breakAtThere = 1, breakAtFour = 1) {
   if ($(name).length) {
     new Macy({
       container: name,
@@ -16,10 +16,10 @@ window.masonry = function init(name = '.masonry', number = 3) {
         x: '2%',
       },
       breakAt: {
-        1200: number,
-        940: number,
-        520: 1,
-        400: 1
+        1200: breakAtOne,
+        940: breakAtTwo,
+        520: breakAtThere,
+        400: breakAtFour
       },
     });
   }

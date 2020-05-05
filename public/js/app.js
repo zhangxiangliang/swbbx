@@ -37128,7 +37128,10 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 window.masonry = function init() {
   var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '.masonry';
-  var number = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
+  var breakAtOne = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
+  var breakAtTwo = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
+  var breakAtThere = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+  var breakAtFour = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
 
   if ($(name).length) {
     new Macy({
@@ -37144,10 +37147,10 @@ window.masonry = function init() {
         x: '2%'
       },
       breakAt: {
-        1200: number,
-        940: number,
-        520: 1,
-        400: 1
+        1200: breakAtOne,
+        940: breakAtTwo,
+        520: breakAtThere,
+        400: breakAtFour
       }
     });
   }
