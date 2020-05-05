@@ -14,7 +14,9 @@
         <div class="col-9 px-2">
           <div>{{$mp->name}}</div>
           <div>
+            @if(in_array($mp->name, ['张小二', '神武', '钢背兽']))
             <div class="badge badge-success">作者</div>
+            @endif
             <div class="badge badge-success">会员</div>
           </div>
         </div>
