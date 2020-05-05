@@ -21,9 +21,15 @@ class CreateUsersTable extends Migration
             $table->string('password');
 
             // 用户数据
+            $table->string('open_id')->nullable();
             $table->string('avatar')->nullable();
             $table->string('introduction')->nullable();
             $table->integer('notification_count')->unsigned()->default(0);
+
+            // 作者数据
+            $table->string('mp_name')->nullable();
+            $table->string('mp_qrcode')->nullable();
+            $table->string('mp_introduction')->nullable();
 
             // 时间线
             $table->dateTime('created_at');
