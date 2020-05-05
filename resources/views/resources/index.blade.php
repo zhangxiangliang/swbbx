@@ -19,7 +19,7 @@
 
 @section('scripts')
 <script>
-  masonry('.masonry', 3, 3, 2, 2);
+  masonry('.masonry-resource', 3, 3, 2, 2);
 
 </script>
 @endsection
