@@ -51,6 +51,9 @@ Route::group(['namespace' => 'Web'], function () {
     // 科举相关
     Route::get('questions', 'QuestionsController@index')->name('questions.index');
 
+    // 资源相关
+    Route::get('resources', 'ResourcesController@index')->name('resources.index');
+
     // 经验计算器
     Route::get('experiences', 'ExperiencesController@index')->name('experiences.index');
 

@@ -13,6 +13,11 @@ class QuestionsController extends Controller
         $this->middleware('auth', ['except' => ['index']]);
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index(Request $request)
     {
         $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
