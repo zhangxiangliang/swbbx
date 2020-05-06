@@ -22,9 +22,9 @@ class UsersSeeder extends Seeder
             'avatar' => config('app.url'). "/images/avatar/xiaoer.jpg",
             'introduction' => '【神武百宝箱】小程序作者，让我们一起闯荡神武',
 
-            'mp_name' => '10号选手',
-            'mp_qrcode' => config('app.url'). "/images/qrcode/xiaoer.jpg",
-            'mp_introduction' => '小二的魔法实验室',
+            'contribution_name' => '【公众号】10号选手',
+            'contribution_qrcode' => config('app.url'). "/images/qrcode/xiaoer.jpg",
+            'contribution_score' => 30,
         ]);
 
         // 创建公众号作者
@@ -36,9 +36,9 @@ class UsersSeeder extends Seeder
             'avatar' => config('app.url'). "/images/avatar/sw.jpg",
             'introduction' => '【神武4】公众号的作者',
 
-            'mp_name' => '神武4',
-            'mp_qrcode' => config('app.url'). "/images/qrcode/sw.jpg",
-            'mp_introduction' => '神武官方微信公众号',
+            'contribution_name' => '【公众号】神武4',
+            'contribution_qrcode' => config('app.url'). "/images/qrcode/sw.jpg",
+            'contribution_score' => 20,
         ]);
 
         // 创建公众号作者
@@ -50,9 +50,9 @@ class UsersSeeder extends Seeder
             'avatar' => config('app.url'). "/images/avatar/gbs.jpg",
             'introduction' => '【刚背兽聊游戏】公众号的作者',
 
-            'mp_name' => '刚背兽聊游戏',
-            'mp_qrcode' => config('app.url'). "/images/qrcode/gbs.jpg",
-            'mp_introduction' => '兽哥带你遨游神武',
+            'contribution_name' => '【公众号】刚背兽聊游戏',
+            'contribution_qrcode' => config('app.url'). "/images/qrcode/gbs.jpg",
+            'contribution_score' => 10,
         ]);
 
         // 创建公众号作者
@@ -64,9 +64,9 @@ class UsersSeeder extends Seeder
             'avatar' => config('app.url'). "/images/avatar/kp.jpg",
             'introduction' => '【神武攻略】公众号的作者',
 
-            'mp_name' => '神武攻略',
-            'mp_qrcode' => config('app.url'). "/images/qrcode/kp.jpg",
-            'mp_introduction' => '攻略和打书参考中心',
+            'contribution_name' => '【公众号】神武攻略',
+            'contribution_qrcode' => config('app.url'). "/images/qrcode/kp.jpg",
+            'contribution_score' => 5,
         ]);
     }
 }

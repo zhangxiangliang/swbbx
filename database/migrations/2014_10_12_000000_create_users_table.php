@@ -27,9 +27,9 @@ class CreateUsersTable extends Migration
             $table->integer('notification_count')->unsigned()->default(0);
 
             // 作者数据
-            $table->string('mp_name')->nullable();
-            $table->string('mp_qrcode')->nullable();
-            $table->string('mp_introduction')->nullable();
+            $table->string('contribution_name')->nullable();
+            $table->string('contribution_qrcode')->nullable();
+            $table->integer('contribution_score')->unsigned()->default(0);
 
             // 时间线
             $table->dateTime('created_at');
