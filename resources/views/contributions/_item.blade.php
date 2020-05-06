@@ -1,10 +1,14 @@
 <div class="card">
+  @if($contribution->contribution_name)
   <div class="card-header">
     <div class="d-flex align-items-center justify-content-between">
       <div>{{$contribution->contribution_name}}</div>
+      @if($contribution->contribution_qrcode)
       <div class="badge badge-success" data-toggle="collapse" data-target="#{{$contribution->name}}">查看</div>
+      @endif
     </div>
   </div>
+  @endif
   <div class="list-group list-group-flush">
     @if($contribution->contribution_qrcode)
     <div class="list-group-item collapse" id="{{$contribution->name}}">
