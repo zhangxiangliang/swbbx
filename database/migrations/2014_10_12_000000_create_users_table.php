@@ -17,8 +17,6 @@ class CreateUsersTable extends Migration
             // 标识
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
 
             // 用户数据
             $table->string('open_id')->nullable();
