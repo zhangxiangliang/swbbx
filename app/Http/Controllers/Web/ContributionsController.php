@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class ResourcesController extends Controller
+class ContributionsController extends Controller
 {
     public function __construct()
     {
@@ -19,7 +19,7 @@ class ResourcesController extends Controller
      */
     public function index(Request $request)
     {
-        $mps = User::where('mp_name', '<>', '')->get();
-        return view('resources.index', compact('mps'));
+        $contributions = User::where('contribution_score', '>', 0)->get();
+        return view('contributions.index', compact('contributions'));
     }
 }

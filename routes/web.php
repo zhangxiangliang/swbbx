@@ -52,7 +52,7 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('questions', 'QuestionsController@index')->name('questions.index');
 
     // 资源相关
-    Route::get('resources', 'ResourcesController@index')->name('resources.index');
+    Route::get('contributions', 'ContributionsController@index')->name('contributions.index');
 
     // 经验计算器
     Route::get('experiences', 'ExperiencesController@index')->name('experiences.index');
