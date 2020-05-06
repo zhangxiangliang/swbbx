@@ -3,7 +3,7 @@
     <div class="list-group-item">
       <div class="d-flex align-items-center justify-content-between">
         <div>{{ $item->name }}</div>
-        <a href="{{route('items.show', ['item' => $item->id])}}" class="badge badge-success ">查看</a>
+        <a href="{{route('items.show', ['item' => $item->id])}}" class="badge badge-success">查看</a>
       </div>
     </div>
 

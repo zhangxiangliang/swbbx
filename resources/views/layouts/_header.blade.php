@@ -22,8 +22,8 @@
         <li class="nav-item {{request()->is('servers') ? 'active': ''}}">
           <a class="nav-link" href="{{ route('servers.index') }}">组队结伴</a>
         </li>
-        <li class="nav-item {{request()->is('resources') ? 'active': ''}}">
-          <a class="nav-link" href="{{ route('resources.index') }}">资源推荐</a>
+        <li class="nav-item {{request()->is('contributions') ? 'active': ''}}">
+          <a class="nav-link" href="{{ route('contributions.index') }}">贡献榜单</a>
         </li>
       </ul>
 
