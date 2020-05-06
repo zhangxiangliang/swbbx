@@ -19,7 +19,9 @@ class ContributionsController extends Controller
      */
     public function index(Request $request)
     {
-        $contributions = User::where('contribution_score', '>', 0)->get();
+        $contributions = User::where('contribution_score', '>', 0)
+            ->orderBy('contribution_score', 'desc')
+            ->get();
         return view('contributions.index', compact('contributions'));
     }
 }
