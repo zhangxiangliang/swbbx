@@ -29,11 +29,11 @@ class UsersSeeder extends Seeder
         User::create([
             'name' => '神武',
             'open_id' => '',
-            'avatar' => config('app.url'). "/images/avatar/sw.jpg",
+            'avatar' => config('app.url'). "/images/avatar/神武.jpg",
             'introduction' => '【神武4】公众号的作者',
 
             'contribution_name' => '【公众号】神武4',
-            'contribution_qrcode' => config('app.url'). "/images/qrcode/sw.jpg",
+            'contribution_qrcode' => config('app.url'). "/images/qrcode/神武.jpg",
             'contribution_score' => 40,
         ]);
 
