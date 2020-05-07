@@ -122,6 +122,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ExperiencesLevelSeeder::class);
         $this->call(ExperiencesSkillSeeder::class);
 
+        // 宠物技能
+        $this->call(PetSkillBaseSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
