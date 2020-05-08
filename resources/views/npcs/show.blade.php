@@ -63,42 +63,42 @@
           {{-- 地图信息 --}}
           @if($npc->map)
           <div class="collapse" id="maps" data-parent="#group">
-            @include('maps._list', ['maps' => [$npc->map]])
+            @include('maps._list', ['maps' => [$npc->map], 'masonry' => 'maps'])
           </div>
           @endif
 
           {{-- 好友信息 --}}
           @if($npc->friends)
           <div class="collapse" id="npcs" data-parent="#group">
-            @include('npcs._list', ['npcs' => $npc->friends])
+            @include('npcs._list', ['npcs' => $npc->friends, 'masonry' => 'npcs'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if(count($npc->baseSkills))
           <div class="collapse" id="baseSkills" data-parent="#group">
-            @include('skills._list', ['skills' => $npc->baseSkills])
+            @include('skills._list', ['skills' => $npc->baseSkills, 'masonry' => 'baseSkills'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if(count($npc->mountSkills))
           <div class="collapse" id="mountSkills" data-parent="#group">
-            @include('skills._list', ['skills' => $npc->mountSkills])
+            @include('skills._list', ['skills' => $npc->mountSkills, 'masonry' => 'mountSkills'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if(count($npc->flySkills))
           <div class="collapse" id="flySkills" data-parent="#group">
-            @include('skills._list', ['skills' => $npc->flySkills])
+            @include('skills._list', ['skills' => $npc->flySkills, 'masonry' => 'flySkills'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if(count($npc->superSkills))
           <div class="collapse" id="superSkills" data-parent="#group">
-            @include('skills._super-list', ['skillsGroup' => $npc->superSkillsGroup])
+            @include('skills._super-list', ['skillsGroup' => $npc->superSkillsGroup, 'masonry' => 'superSkills'])
           </div>
           @endif
         </div>

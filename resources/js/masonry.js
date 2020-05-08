@@ -10,7 +10,7 @@ window.masonry = function init(name = '.masonry', breakAtOne = 3, breakAtTwo = 3
       useOwnImageLoader: false,
       debug: true,
       mobileFirst: true,
-      columns: 1,
+      columns: 3,
       margin: {
         y: 16,
         x: '2%',
@@ -26,7 +26,6 @@ window.masonry = function init(name = '.masonry', breakAtOne = 3, breakAtTwo = 3
 }
 
 masonry();
-$('.collapse').on('show.bs.collapse', function (event) {
-  masonry();
+$('.collapse').on('shown.bs.collapse', function (event) {
   masonry(`.masonry-${event.target.id}`);
 });

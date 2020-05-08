@@ -259,7 +259,7 @@
         {{-- 集合信息 --}}
         @if($levels)
         <div class="collapse" id="levels" data-parent="#group">
-          @include('experiences._level-list', ['levels' => $levels])
+          @include('experiences._level-list', ['levels' => $levels, 'masonry' => 'levels'])
 
           {{-- 无内容 --}}
           @if(count($levels) === 0)
@@ -271,7 +271,7 @@
         {{-- 集合信息 --}}
         @if($skills)
         <div class="collapse" id="skills" data-parent="#group">
-          @include('experiences._skill-list', ['skills' => $skills])
+          @include('experiences._skill-list', ['skills' => $skills, 'masonry' => 'skills'])
 
           {{-- 无内容 --}}
           @if(count($skills) === 0)

@@ -37141,7 +37141,7 @@ window.masonry = function init() {
       useOwnImageLoader: false,
       debug: true,
       mobileFirst: true,
-      columns: 1,
+      columns: 3,
       margin: {
         y: 16,
         x: '2%'
@@ -37157,8 +37157,7 @@ window.masonry = function init() {
 };
 
 masonry();
-$('.collapse').on('show.bs.collapse', function (event) {
-  masonry();
+$('.collapse').on('shown.bs.collapse', function (event) {
   masonry(".masonry-".concat(event.target.id));
 });
 

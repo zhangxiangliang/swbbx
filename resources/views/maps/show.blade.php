@@ -63,42 +63,42 @@
           {{-- 导师信息 --}}
           @if($map->teacher)
           <div class="collapse" id="teacher" data-parent="#group">
-            @include('npcs._item', ['npc' => $map->teacher])
+            @include('npcs._item', ['npc' => $map->teacher, 'masonry' => 'teacher'])
           </div>
           @endif
 
           {{-- NPC信息 --}}
           @if($map->npcs)
           <div class="collapse " id="npcs" data-parent="#group">
-            @include('npcs._list', ['npcs' => $map->npcs])
+            @include('npcs._list', ['npcs' => $map->npcs, 'masonry' => 'npcs'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if($map->teacher && count($map->baseSkills))
           <div class="collapse" id="baseSkills" data-parent="#group">
-            @include('skills._list', ['skills' => $map->baseSkills])
+            @include('skills._list', ['skills' => $map->baseSkills, 'masonry' => 'baseSkills'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if($map->teacher && count($map->mountSkills))
           <div class="collapse" id="mountSkills" data-parent="#group">
-            @include('skills._list', ['skills' => $map->mountSkills])
+            @include('skills._list', ['skills' => $map->mountSkills, 'masonry' => 'mountSkills'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if($map->teacher && count($map->flySkills))
           <div class="collapse" id="flySkills" data-parent="#group">
-            @include('skills._list', ['skills' => $map->flySkills])
+            @include('skills._list', ['skills' => $map->flySkills, 'masonry' => 'flySkills'])
           </div>
           @endif
 
           {{-- 技能信息 --}}
           @if($map->teacher && count($map->superSkills))
           <div class="collapse" id="superSkills" data-parent="#group">
-            @include('skills._super-list', ['skillsGroup' => $map->superSkillsGroup])
+            @include('skills._super-list', ['skillsGroup' => $map->superSkillsGroup, 'masonry' => 'superSkills'])
           </div>
           @endif
         </div>

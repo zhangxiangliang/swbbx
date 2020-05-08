@@ -34,7 +34,7 @@
         {{-- 集合信息 --}}
         @if($produce->items)
         <div class="collapse" id="items" data-parent="#group">
-          @include('items._list', ['items' => $produce->items])
+          @include('items._list', ['items' => $produce->items, 'masonry' => 'items'])
         </div>
         @endif
       </div>
