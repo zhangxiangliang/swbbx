@@ -14,12 +14,8 @@ class CreatePetSkillsTable extends Migration
     public function up()
     {
         Schema::create('pet_skills', function (Blueprint $table) {
-
-
             // 标识
             $table->id();
-            $table->integer('map_id')->default(0)->comment('所属地图');
-            $table->integer('npc_id')->default(0)->comment('所属导师');
 
             // 结构数据
             $table->string('name')->default('')->comment('技能名称');
