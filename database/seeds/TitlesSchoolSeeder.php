@@ -37,7 +37,7 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '红英校尉', 'teacher' => '程将军', 'map' => '天策', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '牡丹御使', 'teacher' => '程将军', 'map' => '天策', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
             ['name' => '巾帼英豪', 'teacher' => '程将军', 'map' => '天策', 'tags' => ['四级称谓', '女性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '程将军', 'map' => '天策', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '剑胆琴心', 'teacher' => '程将军', 'map' => '天策', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
             // 天策男性
             ['name' => '护城小兵', 'teacher' => '程将军', 'map' => '天策', 'tags' => ['一级称谓', '男性称谓'], 'description' => '等级≥30门派贡献值≥60'],
@@ -51,7 +51,7 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '飞燕贤女', 'teacher' => '袁飞', 'map' => '天魔里', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '映月伊人', 'teacher' => '袁飞', 'map' => '天魔里', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
             ['name' => '妖媚才媛', 'teacher' => '袁飞', 'map' => '天魔里', 'tags' => ['四级称谓', '女性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '袁飞', 'map' => '天魔里', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '混沌女巫', 'teacher' => '袁飞', 'map' => '天魔里', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
             // 天魔男性
             ['name' => '刺探耳目', 'teacher' => '袁飞', 'map' => '天魔里', 'tags' => ['一级称谓', '男性称谓'], 'description' => '等级≥30门派贡献值≥60'],
@@ -135,7 +135,7 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '驯兽妖魅', 'teacher' => '万兽之王', 'map' => '万兽岭', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '吸血美姬', 'teacher' => '万兽之王', 'map' => '万兽岭', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
             ['name' => '破茧天魔', 'teacher' => '万兽之王', 'map' => '万兽岭', 'tags' => ['四级称谓', '女性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '万兽之王', 'map' => '万兽岭', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '绝命妖女', 'teacher' => '万兽之王', 'map' => '万兽岭', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
             // 万兽男性
             ['name' => '巡山小妖', 'teacher' => '万兽之王', 'map' => '万兽岭', 'tags' => ['一级称谓', '男性称谓'], 'description' => '等级≥30门派贡献值≥60'],
@@ -149,7 +149,7 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '灵霄美玉', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '大罗仙姬', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
             ['name' => '逍遥公主', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['四级称谓', '女性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '广寒天仙', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
             // 天宫男性
             ['name' => '桃园力士', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['一级称谓', '男性称谓'], 'description' => '等级≥30门派贡献值≥60'],
@@ -158,7 +158,7 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '瑶池天将', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['四级称谓', '男性称谓'], 'description' => '等级≥90门派贡献值≥240'],
             ['name' => '镇魔天王', 'teacher' => '杨戬', 'map' => '凌霄天宫', 'tags' => ['五级称谓', '男性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
-            // 普陀女性(未对)
+            // 普陀女性
             ['name' => '掌灯仕女', 'teacher' => '观音菩萨', 'map' => '南海普陀', 'tags' => ['一级称谓', '女性称谓'], 'description' => '等级≥30门派贡献值≥60'],
             ['name' => '莲花仙子', 'teacher' => '观音菩萨', 'map' => '南海普陀', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '紫竹仙姬', 'teacher' => '观音菩萨', 'map' => '南海普陀', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
@@ -177,7 +177,7 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '百花仙女', 'teacher' => '镇元子', 'map' => '镇元五庄', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '玉清玄女', 'teacher' => '镇元子', 'map' => '镇元五庄', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
             ['name' => '日月光华', 'teacher' => '镇元子', 'map' => '镇元五庄', 'tags' => ['四级称谓', '女性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '镇元子', 'map' => '镇元五庄', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '乾坤仙姑', 'teacher' => '镇元子', 'map' => '镇元五庄', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
             // 五庄弟子
             ['name' => '道家仙童', 'teacher' => '镇元子', 'map' => '镇元五庄', 'tags' => ['一级称谓', '男性称谓'], 'description' => '等级≥30门派贡献值≥60'],
@@ -200,19 +200,19 @@ class TitlesSchoolSeeder extends Seeder
             ['name' => '覆海神龙', 'teacher' => '龙王敖广', 'map' => '东海龙宫', 'tags' => ['四级称谓', '男性称谓'], 'description' => '等级≥90门派贡献值≥240'],
             ['name' => '飞龙在天', 'teacher' => '龙王敖广', 'map' => '东海龙宫', 'tags' => ['五级称谓', '男性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
-            // 无名谷女性(未对)
+            // 无名谷女性
             ['name' => '霜雪侍女', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['一级称谓', '女性称谓'], 'description' => '等级≥30门派贡献值≥60'],
             ['name' => '空谷幽兰', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['二级称谓', '女性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '冷月战姬', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['三级称谓', '女性称谓'], 'description' => '等级≥70门派贡献值≥180'],
             ['name' => '无双红颜', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['四级称谓', '女性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '谷神居渊', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['五级称谓', '女性称谓'], 'description' => '等级≥110门派贡献值≥300'],
 
             // 无名谷男性(未对)
             ['name' => '无闻小辈', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['一级称谓', '男性称谓'], 'description' => '等级≥30门派贡献值≥60'],
             ['name' => '闲云野鹤', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['二级称谓', '男性称谓'], 'description' => '等级≥50门派贡献值≥120'],
             ['name' => '雪域奇兵', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['三级称谓', '男性称谓'], 'description' => '等级≥70门派贡献值≥180'],
-            ['name' => '界外侠隐身', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['四级称谓', '男性称谓'], 'description' => '等级≥90门派贡献值≥240'],
-            ['name' => '', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['五级称谓', '男性称谓'], 'description' => '等级≥110门派贡献值≥300'],
+            ['name' => '界外侠隐', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['四级称谓', '男性称谓'], 'description' => '等级≥90门派贡献值≥240'],
+            ['name' => '杂技大师', 'teacher' => '姬长歌', 'map' => '无名谷', 'tags' => ['五级称谓', '男性称谓'], 'description' => '等级≥110门派贡献值≥300'],
         ];
 
         $npcs = Npc::whereIn("name", [
