@@ -21,7 +21,7 @@ class CreateTitlesTable extends Migration
 
             // 数据结构
             $table->string('name')->default('')->comment('称谓');
-            $table->json('tags')->default('')->comment('标签');
+            $table->json('tags')->nullable()->comment('标签');
             $table->string('description')->default('')->comment('描述');
 
             // 时间线
