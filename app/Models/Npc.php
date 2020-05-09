@@ -19,6 +19,11 @@ class Npc extends Model
         return $this->belongsToMany(Npc::class, 'npc_friend', 'npc_id', 'friend_id');
     }
 
+    public function titles()
+    {
+        return $this->hasMany(Title::class);
+    }
+
     public function baseSkills()
     {
         return $this->hasMany(Skill::class)->where('skills.type', 'normal');
