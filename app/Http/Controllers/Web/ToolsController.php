@@ -11,18 +11,25 @@ class ToolsController extends Controller
         $this->middleware('auth', ['except' => ['index']]);
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $tools = [
             // 图鉴
-            (object)['title' => '物品图鉴', 'description' => '网罗神武物品', 'category' => '图鉴', 'route' => route('items.index')],
-            (object)['title' => '地图图鉴', 'description' => '十三门派在其中', 'category' => '图鉴', 'route' => route('maps.index')],
-            (object)['title' => '集合图鉴', 'description' => '配方集合全都有', 'category' => '图鉴', 'route' => route('produces.index')],
-            (object)['title' => '宠物技能', 'description' => '自古清河出高必', 'category' => '图鉴', 'route' => route('pet-skills.index')],
-            (object)['title' => '宠物图鉴', 'description' => '汇聚成品宠物', 'category' => '图鉴', 'route' => ''],
-            (object)['title' => '坐骑图鉴', 'description' => '坐骑技能与展示', 'category' => '图鉴', 'route' => ''],
-            (object)['title' => '变身卡图鉴', 'description' => '坐骑技能与展示', 'category' => '图鉴', 'route' => ''],
-            (object)['title' => '装备图鉴', 'description' => '属性特效特技', 'category' => '图鉴', 'route' => ''],
+            (object)['title' => '地图图鉴', 'description' => '十三门派在其中', 'category' => '角色相关', 'route' => route('maps.index')],
+            (object)['title' => '称谓图鉴', 'description' => '神武称谓大百科', 'category' => '角色相关', 'route' => route('titles.index')],
+            (object)['title' => '物品图鉴', 'description' => '网罗神武物品', 'category' => '角色相关', 'route' => route('items.index')],
+            (object)['title' => '集合图鉴', 'description' => '配方集合全都有', 'category' => '角色相关', 'route' => route('produces.index')],
+            (object)['title' => '装备图鉴', 'description' => '属性特效特技', 'category' => '角色相关', 'route' => ''],
+
+            (object)['title' => '宠物技能', 'description' => '自古清河出高必', 'category' => '宠物相关', 'route' => route('pet-skills.index')],
+            (object)['title' => '宠物图鉴', 'description' => '汇聚成品宠物', 'category' => '宠物相关', 'route' => ''],
+            (object)['title' => '坐骑图鉴', 'description' => '坐骑技能与展示', 'category' => '宠物相关', 'route' => ''],
+            (object)['title' => '变身卡图鉴', 'description' => '坐骑技能与展示', 'category' => '宠物相关', 'route' => ''],
 
             // 计算器
             (object)['title' => '经验计算器', 'description' => '卡级突破不落下', 'category' => '计算器', 'route' => route('experiences.index')],

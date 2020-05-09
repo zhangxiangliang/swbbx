@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Models\Server;
+use App\Models\Skill;
+use App\Models\Title;
 use Illuminate\Http\Request;
 
-class ServersController extends Controller
+class TitlesController extends Controller
 {
     public function __construct()
     {
@@ -21,13 +22,13 @@ class ServersController extends Controller
     {
         $keywords = $request->get('search', '') === '' ? [] : explode(' ', $request->search);
 
-        $query = Server::with('branches', 'master');
+        $query = Title::with('map', 'npc');
 
         foreach ($keywords as $keyword) {
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $servers = $query->recent()->paginate(12);
-        return view('servers.index', compact('servers'));
+        $titles = $query->paginate(12);
+        return view('titles.index', compact('titles'));
     }
 }

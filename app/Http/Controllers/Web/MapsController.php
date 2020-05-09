@@ -32,15 +32,17 @@ class MapsController extends Controller
      */
     public function show(Map $map)
     {
-        $map->load(
+        $map->load([
+            'titles.npc', 'titles.map',
             'teacher', 'npcs.favorites', 'npcs.friends', 'npcs.map',
             'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
-        );
+        ]);
 
         $map->superSkillsGroup = $map->superSkills->map(function ($item) {
             $item->group = explode('·', $item['name'])[0];
             return $item;
         })->groupBy('group');
+
         return view('maps.show', compact('map'));
     }
 }

@@ -56,6 +56,7 @@ class NpcsController extends Controller
     {
         $npc->load(
             'map', 'favorites',
+            'titles.npc', 'titles.map',
             'friends.favorites', 'friends.friends', 'friends.map',
             'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
         );
