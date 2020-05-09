@@ -126,7 +126,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PetSkillBaseSeeder::class);
 
         // 称谓相关
-        $this->call(TitlesSkillSeeder::class);
+        $this->call(TitlesSchoolSeeder::class);
 
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
