@@ -23,7 +23,7 @@
 
     <div id="group">
       <div class="accordion-header">
-        @if($item->produces)
+        @if(count($item->produces))
         <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#produces">
           集合信息 <span class="badge badge-light">{{count($item->produces)}}</span>
         </button>
@@ -32,7 +32,7 @@
 
       <div class="accordion-group">
         {{-- 集合信息 --}}
-        @if($item->produces)
+        @if(count($item->produces))
         <div class="collapse" id="produces" data-parent="#group">
           @include('produces._list', ['produces' => $item->produces, 'masonry' => 'produces'])
         </div>

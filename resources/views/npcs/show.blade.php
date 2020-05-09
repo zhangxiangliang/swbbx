@@ -28,9 +28,15 @@
           </button>
           @endif
 
-          @if($npc->friends)
+          @if(count($npc->friends))
           <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#npcs">
             好友信息 <span class="badge badge-light">{{count($npc->friends)}}</span>
+          </button>
+          @endif
+
+          @if(count($npc->titles))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#titles">
+            师门称谓 <span class="badge badge-light">{{count($npc->titles)}}</span>
           </button>
           @endif
 
@@ -68,9 +74,16 @@
           @endif
 
           {{-- 好友信息 --}}
-          @if($npc->friends)
+          @if(count($npc->friends))
           <div class="collapse" id="npcs" data-parent="#group">
             @include('npcs._list', ['npcs' => $npc->friends, 'masonry' => 'npcs'])
+          </div>
+          @endif
+
+          {{-- 好友信息 --}}
+          @if(count($npc->titles))
+          <div class="collapse" id="titles" data-parent="#group">
+            @include('titles._list', ['titles' => $npc->titles, 'masonry' => 'titles'])
           </div>
           @endif
 

@@ -29,9 +29,15 @@
           </button>
           @endif
 
-          @if($map->npcs)
+          @if($map->npcs && count($map->npcs))
           <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#npcs">
             NPC 信息 <span class="badge badge-light">{{count($map->npcs)}}</span>
+          </button>
+          @endif
+
+          @if($map->titles && count($map->titles))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#titles">
+            师门称谓 <span class="badge badge-light">{{count($map->titles)}}</span>
           </button>
           @endif
 
@@ -68,9 +74,16 @@
           @endif
 
           {{-- NPC信息 --}}
-          @if($map->npcs)
+          @if($map->npcs && count($map->npcs) )
           <div class="collapse " id="npcs" data-parent="#group">
             @include('npcs._list', ['npcs' => $map->npcs, 'masonry' => 'npcs'])
+          </div>
+          @endif
+
+          {{-- 技能信息 --}}
+          @if($map->titles && count($map->titles))
+          <div class="collapse" id="titles" data-parent="#group">
+            @include('titles._list', ['titles' => $map->titles, 'masonry' => 'titles'])
           </div>
           @endif
 
