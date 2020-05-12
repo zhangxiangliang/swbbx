@@ -3,7 +3,6 @@
 @section('title', isset($category) ? $category->name : '一起闯荡神武世界')
 
 @section('content')
-
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     <div class="card mb-2">

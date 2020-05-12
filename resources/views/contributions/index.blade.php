@@ -3,6 +3,7 @@
 @section('title', '贡献榜单')
 
 @section('content')
+<h1>贡献榜单</h1>
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     @include('contributions._list', ['contributions' => $contributions])

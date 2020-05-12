@@ -3,7 +3,6 @@
 @section('title', '主页')
 
 @section('content')
-
 <div class="flash-message">
   <p class="alert alert-info">
     【小提示】按钮基本都可点击跳转对应功能哦~

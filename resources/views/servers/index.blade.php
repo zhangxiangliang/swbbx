@@ -3,7 +3,7 @@
 @section('title', '服务器')
 
 @section('content')
-
+<h1>组队结伴</h1>
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 搜索 --}}
@@ -11,7 +11,7 @@
       <div class="card-header bg-transparent">
         <form action="{{ route('servers.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
-            <input name="search" type="text" class="form-control" placeholder="输入需要查询的服务器" aria-label=""
+            <input name="search" type="text" class="form-control" placeholder="输入需要查询的组队结伴" aria-label=""
               value="{{request()->get('search', '')}}" aria-describedby="">
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit">搜索</button>

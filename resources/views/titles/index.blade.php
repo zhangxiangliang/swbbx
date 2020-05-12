@@ -3,7 +3,7 @@
 @section('title', '门派称谓')
 
 @section('content')
-
+<h1>门派称谓</h1>
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 搜索 --}}

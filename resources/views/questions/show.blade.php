@@ -13,30 +13,29 @@
         <div class="card-block bg-light">
           <div class="row">
             <div class="col-md-6">
-              <a class="btn btn-link" href="{{ route('questions.index') }}"><- Back</a>
-            </div>
-            <div class="col-md-6">
-              <a class="btn btn-sm btn-warning float-right mt-1" href="{{ route('questions.edit', $question->id) }}">
-                Edit
-              </a>
+              <a class="btn btn-link" href="{{ route('questions.index') }}">
+                <- Back</a> </div> <div class="col-md-6">
+                  <a class="btn btn-sm btn-warning float-right mt-1"
+                    href="{{ route('questions.edit', $question->id) }}">
+                    Edit
+                  </a>
             </div>
           </div>
         </div>
         <br>
 
         <label>Category</label>
-<p>
-    {{ $question->category }}
-</p>
- <label>Question</label>
-<p>
-    {{ $question->question }}
-</p>
- <label>Answer</label>
-<p>
-    {{ $question->answer }}
-</p>
-
+        <p>
+          {{ $question->category }}
+        </p>
+        <label>Question</label>
+        <p>
+          {{ $question->question }}
+        </p>
+        <label>Answer</label>
+        <p>
+          {{ $question->answer }}
+        </p>
       </div>
     </div>
   </div>

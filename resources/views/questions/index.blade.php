@@ -3,7 +3,7 @@
 @section('title', '科举答题器')
 
 @section('content')
-
+<h1>科举答题器</h1>
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 搜索 --}}

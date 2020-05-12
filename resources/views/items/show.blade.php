@@ -3,7 +3,6 @@
 @section('title', $item->name)
 
 @section('content')
-
 <h1>{{$item->name}}</h1>
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
