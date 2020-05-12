@@ -48,9 +48,9 @@
           </li>
         </ul>
         @if (request()->get('tab', 'topics') === 'topics')
-        @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+        @include('users._topics', ['topics' => $user->topics()->recent()->paginate()])
         @else
-        @include('users._replies', ['replies' => $user->replies()->with('topic')->recent()->paginate(5)])
+        @include('users._replies', ['replies' => $user->replies()->with('topic')->recent()->paginate()])
         @endif
       </div>
     </div>

@@ -27,7 +27,7 @@ class ServersController extends Controller
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $servers = $query->recent()->paginate(12);
+        $servers = $query->recent()->paginate();
         return view('servers.index', compact('servers'));
     }
 }

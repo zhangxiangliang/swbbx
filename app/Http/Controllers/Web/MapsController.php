@@ -19,7 +19,7 @@ class MapsController extends Controller
      */
     public function index()
     {
-        $maps = Map::paginate(15);
+        $maps = Map::paginate();
 
         return view('maps.index', compact('maps'));
     }

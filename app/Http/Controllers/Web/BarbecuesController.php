@@ -27,7 +27,7 @@ class BarbecuesController extends Controller
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $produces = $query->recent()->paginate(30);
+        $produces = $query->recent()->paginate();
 
         // 传参变量话题和分类到模板中
         return view('barbecues.index', compact('produces'));

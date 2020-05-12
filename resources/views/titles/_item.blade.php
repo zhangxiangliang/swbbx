@@ -14,8 +14,10 @@
       <a href="{{route('npcs.show', $title->npc->id)}}" class="badge badge-success">{{$title->npc->name}}</a>
       @endif
     </div>
+    @if($title->description)
     <div class="list-group-item">
       说明: {{ $title->description }}
     </div>
+    @endif
   </div>
 </div>

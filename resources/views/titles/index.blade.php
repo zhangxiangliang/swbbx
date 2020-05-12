@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '科举答题器')
+@section('title', '门派称谓')
 
 @section('content')
 

@@ -41,7 +41,7 @@ class NpcsController extends Controller
             foreach ($keywords as $keyword) {
                 $query->where('name', 'like', '%'. $keyword . '%');
             }
-        })->recent()->paginate(12);
+        })->recent()->paginate();
 
         return view('npcs.index', compact('npcs'));
     }

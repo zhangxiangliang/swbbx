@@ -28,7 +28,7 @@ class TitlesController extends Controller
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $titles = $query->paginate(12);
+        $titles = $query->paginate();
         return view('titles.index', compact('titles'));
     }
 }

@@ -27,7 +27,7 @@ class ItemsController extends Controller
             $query->where('name', 'like', '%'. $keyword . '%');
         }
 
-        $items = $query->recent()->paginate(12);
+        $items = $query->recent()->paginate();
 
         return view('items.index', compact('items'));
     }
