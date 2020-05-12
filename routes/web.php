@@ -54,8 +54,11 @@ Route::group(['namespace' => 'Web'], function () {
     // 资源相关
     Route::get('contributions', 'ContributionsController@index')->name('contributions.index');
 
-    // 经验计算器
-    Route::get('experiences', 'ExperiencesController@index')->name('experiences.index');
+    // 经验相关
+    Route::get('experiences/level', 'ExperiencesController@level')->name('experiences.level');
+    Route::get('experiences/skill', 'ExperiencesController@skill')->name('experiences.skill');
+    Route::get('experiences/practice', 'ExperiencesController@practice')->name('experiences.practice');
+    Route::get('experiences/computer', 'ExperiencesController@computer')->name('experiences.computer');
 
     // 话题分类
     Route::get('categories/{category}', 'CategoriesController@show')->name('categories.show');
@@ -63,8 +66,9 @@ Route::group(['namespace' => 'Web'], function () {
     // 宠物相关
     Route::get('pet-skills', 'PetSkillsController@index')->name('pet-skills.index');
 
-    // 宠物相关
+    // 称谓相关
     Route::get('titles', 'TitlesController@index')->name('titles.index');
+    Route::get('officials', 'OfficialsController@index')->name('officials.index');
 
     // 话题相关路由
     Route::resource('replies', 'RepliesController', ['only' => ['store']]);

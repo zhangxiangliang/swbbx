@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Models\LevelExperience;
 use App\Models\SkillExperience;
+use App\Models\PracticeExperience;
 use App\Http\Requests\ExperienceRequest;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,7 +13,7 @@ class ExperiencesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index']]);
+        $this->middleware('auth', ['except' => ['level', 'computer', 'skill', 'practice']]);
     }
 
     /**
@@ -20,7 +21,64 @@ class ExperiencesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function level(Request $request)
+    {
+        $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
+
+        $query = LevelExperience::query();
+
+        foreach ($keywords as $keyword) {
+            $query->orWhere('level', 'like', '%'. $keyword . '%');
+        }
+
+        $levels = $query->paginate();
+        return view('experiences.level', compact('levels'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function skill(Request $request)
+    {
+        $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
+
+        $query = SkillExperience::query();
+
+        foreach ($keywords as $keyword) {
+            $query->orWhere('skill', 'like', '%'. $keyword . '%');
+        }
+
+        $skills = $query->paginate();
+        return view('experiences.skill', compact('skills'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function practice(Request $request)
+    {
+        $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
+
+        $query = PracticeExperience::query();
+
+        foreach ($keywords as $keyword) {
+            $query->orWhere('practice', 'like', '%'. $keyword . '%');
+        }
+
+        $practices = $query->paginate();
+        return view('experiences.practice', compact('practices'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function computer(Request $request)
     {
         $levels = LevelExperience::all();
         $skills = SkillExperience::all();
@@ -105,6 +163,6 @@ class ExperiencesController extends Controller
             ],
         ];
 
-        return view('experiences.index', compact('levels', 'skills', 'total'));
+        return view('experiences.computer', compact('total'));
     }
 }
