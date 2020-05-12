@@ -17,10 +17,18 @@ class MapsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $maps = Map::paginate();
 
+        $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
+
+        $query = Map::query();
+
+        foreach ($keywords as $keyword) {
+            $query->orWhere('name', 'like', '%'. $keyword . '%');
+        }
+
+        $maps = $query->paginate();
         return view('maps.index', compact('maps'));
     }
 

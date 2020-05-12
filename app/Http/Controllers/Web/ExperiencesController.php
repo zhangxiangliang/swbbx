@@ -66,7 +66,7 @@ class ExperiencesController extends Controller
         $query = PracticeExperience::query();
 
         foreach ($keywords as $keyword) {
-            $query->orWhere('practice', 'like', '%'. $keyword . '%');
+            $query->orWhere('level', 'like', '%'. $keyword . '%');
         }
 
         $practices = $query->paginate();
