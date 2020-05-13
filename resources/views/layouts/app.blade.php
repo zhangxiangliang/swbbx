@@ -15,6 +15,7 @@
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+  <link rel="apple-touch-icon" href="{{config('app.url'). "/images/shared/logo.png"}}" />
 
   @yield('styles')
 </head>
