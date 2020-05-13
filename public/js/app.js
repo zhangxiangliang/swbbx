@@ -37149,7 +37149,7 @@ window.masonry = function init() {
       useOwnImageLoader: false,
       debug: true,
       mobileFirst: true,
-      columns: 3,
+      columns: 1,
       margin: {
         y: 16,
         x: '2%'
