@@ -37132,6 +37132,14 @@ window.masonry = function init() {
   var breakAtTwo = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
   var breakAtThere = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
   var breakAtFour = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var ua = navigator.userAgent.toLowerCase();
+
+  if ( false || ua.indexOf('android') > -1 || ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1 || ua.indexOf('symbian') > -1 || ua.indexOf('micromessenger') > -1) {
+    breakAtOne = 1;
+    breakAtTwo = 1;
+    breakAtThere = 1;
+    breakAtFour = 1;
+  }
 
   if ($(name).length) {
     new Macy({
