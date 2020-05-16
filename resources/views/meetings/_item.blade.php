@@ -15,6 +15,10 @@
       <a href="{{route('officials.index')}}" class="badge badge-success">
         {{$meeting->official->name}}
       </a>
+      @else
+      <div class="badge badge-secondary">
+        暂无等级要求
+      </div>
       @endif
       @foreach($meeting->maps as $map)
       <a href="{{route('maps.show', [$map->id])}}" class="badge badge-success">{{ $map->name }}
