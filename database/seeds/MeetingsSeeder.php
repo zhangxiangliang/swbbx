@@ -207,7 +207,7 @@ class MeetingsSeeder extends Seeder
                 "description" => "此奇遇会重复触发，信差：少侠请留步，这里有你的一封书信", "times" => 0, "group" => "天下奇珍系列",
             ],
             [
-                "official" => "", "level" => 0, "name" => "亲囊方",
+                "official" => "", "level" => 0, "name" => "青囊坊",
                 "maps" => [["map" => "南海普陀", "x" => 23, "y" => 41]],
                 "description" => "此奇遇会重复触发，信差：少侠请留步，这里有你的一封书信", "times" => 0, "group" => "天下奇珍系列",
             ],
@@ -223,13 +223,23 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "", "level" => 0, "name" => "七巧阁",
-                "maps" => [["map" => "南海普陀", "x" => 43, "y" => 76]],
+                "maps" => [["map" => "南海普陀", "x" => 92, "y" => 41]],
                 "description" => "此奇遇会重复触发，信差：少侠请留步，这里有你的一封书信", "times" => 0, "group" => "天下奇珍系列",
             ],
             [
                 "official" => "", "level" => 0, "name" => "湛卢坊",
                 "maps" => [["map" => "魔王山", "x" => 70, "y" => 61]],
                 "description" => "此奇遇会重复触发，信差：少侠请留步，这里有你的一封书信", "times" => 0, "group" => "天下奇珍系列",
+            ],
+            [
+                "official" => "", "level" => 0, "name" => "五味斋",
+                "maps" => [["map" => "镇元五庄", "x" => 148, "y" => 96]],
+                "description" => "此奇遇会重复触发，信差：少侠请留步，这里有你的一封书信", "times" => 0, "group" => "天下奇珍系列",
+            ],
+            [
+                "official" => "", "level" => 0, "name" => "天下奇珍",
+                "maps" => [],
+                "description" => "需要完成【天下奇珍】系列奇遇", "times" => 0, "group" => "天下奇珍系列",
             ],
             [
                 "official" => "", "level" => 0, "name" => "书信恐慌症",
@@ -261,7 +271,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "", "level" => 0, "name" => "百兽之王",
                 "maps" => [["map" => "万兽岭", "x" => 0, "y" => 0]],
-                "description" => "万兽岭专属奇遇需要门贡，万兽岭有来有去有几率触发，75级从五品大夫转门派后，可以再次获得专属奇遇，否则只能获取其中一个", "times" => 0, "group" => "门派专属",
+                "description" => "万兽岭专属奇遇需要门贡，当前窗口说话无弹窗，万兽岭有来有去有几率触发，75级从五品大夫转门派后，可以再次获得专属奇遇，否则只能获取其中一个", "times" => 0, "group" => "门派专属",
             ],
             [
                 "official" => "", "level" => 0, "name" => "雷霆天兵",
@@ -281,7 +291,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "", "level" => 0, "name" => "门派试炼",
                 "maps" => [["map" => "七星方寸", "x" => 0, "y" => 0]],
-                "description" => "七星方寸专属奇遇需要门贡，七星方寸大觉金仙有几率触发，75级从五品大夫转门派后，可以再次获得专属奇遇，否则只能获取其中一个", "times" => 0, "group" => "门派专属",
+                "description" => "七星方寸专属奇遇需要门贡，当前窗口说话无弹窗，七星方寸大觉金仙有几率触发，75级从五品大夫转门派后，可以再次获得专属奇遇，否则只能获取其中一个", "times" => 0, "group" => "门派专属",
             ],
             [
                 "official" => "", "level" => 0, "name" => "将府往谈",
@@ -291,7 +301,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "", "level" => 0, "name" => "东海疑踪",
                 "maps" => [["map" => "东海龙宫", "x" => 0, "y" => 0]],
-                "description" => "东海龙宫专属奇遇需要门贡，东海龙宫龟千岁有几率触发，75级从五品大夫转门派后，可以再次获得专属奇遇，否则只能获取其中一个", "times" => 0, "group" => "门派专属",
+                "description" => "东海龙宫专属奇遇需要门贡，东海龙宫龟千岁有几率触发，当前窗口说话无弹窗，75级从五品大夫转门派后，可以再次获得专属奇遇，否则只能获取其中一个", "times" => 0, "group" => "门派专属",
             ],
             [
                 "official" => "", "level" => 0, "name" => "见习鬼差",
@@ -312,11 +322,11 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "", "level" => 0, "name" => "灵宝脱灵",
-                "maps" => [["map" => "青河镇外", "x" => 70, "y" => 60]],
+                "maps" => [["map" => "青河镇外", "x" => 76, "y" => 56]],
                 "description" => "出现青年男子当前窗口说话无弹窗", "times" => 0, "group" => "封缄五灵系列",
             ],
             [
-                "official" => "", "level" => 0, "name" => "迷之青河",
+                "official" => "", "level" => 0, "name" => "谜之青河",
                 "maps" => [["map" => "青河镇", "x" => 0, "y" => 0]],
                 "description" => "青河镇农夫，当前窗口说话无弹窗", "times" => 0, "group" => "封缄五灵系列",
             ],
@@ -330,11 +340,16 @@ class MeetingsSeeder extends Seeder
                 "maps" => [["map" => "青河镇", "x" => 38, "y" => 54], ["map" => "临仙镇", "x" => 33, "y" => 40]],
                 "description" => "出现花仙当前窗口说话无弹窗，五行封印顺序为水、火、木、金、土", "times" => 0, "group" => "封缄五灵系列",
             ],
+            [
+                "official" => "", "level" => 0, "name" => "封缄五灵",
+                "maps" => [],
+                "description" => "需要完成【封缄五灵】系列奇遇", "times" => 0, "group" => "封缄五灵系列",
+            ],
 
             // 神武逍遥游系列
             [
                 "official" => "从三品刺史", "level" => 100, "name" => "金戈情",
-                "maps" => [["map" => "长安城", "x" => 410, "y" => 95]],
+                "maps" => [["map" => "长安城", "x" => 281, "y" => 193]],
                 "description" => "需要拥有至少三十个奇遇成就", "times" => 0, "group" => "神武逍遥游系列",
             ],
             [
@@ -359,7 +374,7 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "从三品刺史", "level" => 100, "name" => "彼岸花",
-                "maps" => [["map" => "南海普陀", "x" => 111, "y" => 15]],
+                "maps" => [["map" => "南海普陀", "x" => 20, "y" => 40]],
                 "description" => "需要拥有至少三十个奇遇成就，地图刷新一枚大型花朵捡起来触发", "times" => 0, "group" => "神武逍遥游系列",
             ],
             [
@@ -370,7 +385,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "从三品刺史", "level" => 100, "name" => "黄泉冷",
                 "maps" => [["map" => "幽冥地府", "x" => 0, "y" => 0]],
-                "description" => "需要拥有至少三十个奇遇成就，幽冥地府孟婆附近有几率触发", "times" => 0, "group" => "神武逍遥游系列",
+                "description" => "需要拥有至少三十个奇遇成就，幽冥地府孟婆附近有几率触发，当前窗口说话无弹窗", "times" => 0, "group" => "神武逍遥游系列",
             ],
             [
                 "official" => "从三品刺史", "level" => 100, "name" => "慕云遮",
@@ -388,21 +403,21 @@ class MeetingsSeeder extends Seeder
                 "description" => "需要拥有至少三十个奇遇成就", "times" => 0, "group" => "神武逍遥游系列",
             ],
             [
-                "official" => "从三品刺史", "level" => 100, "name" => "焚音寂",
+                "official" => "从三品刺史", "level" => 100, "name" => "梵音寂",
                 "maps" => [["map" => "大唐国境", "x" => 97, "y" => 45]],
                 "description" => "需要拥有至少三十个奇遇成就", "times" => 0, "group" => "神武逍遥游系列",
             ],
             [
                 "official" => "从三品刺史", "level" => 100, "name" => "神武逍遥游",
                 "maps" => [],
-                "description" => "需要完成【神武逍遥游】相关奇遇", "times" => 0, "group" => "神武逍遥游系列",
+                "description" => "需要完成【神武逍遥游】相关奇遇，奖励称谓三界奇侠", "times" => 0, "group" => "神武逍遥游系列",
             ],
 
             // 走四方系列
             [
                 "official" => "", "level" => 0, "name" => "观沧海",
                 "maps" => [["map" => "花果山", "x" => 99, "y" => 101]],
-                "description" => "寅时触发几率增加", "times" => 0, "group" => "走四方系列",
+                "description" => "寅时触发几率增加，当前窗口说话无弹窗", "times" => 0, "group" => "走四方系列",
             ],
             [
                 "official" => "", "level" => 0, "name" => "访名山",
@@ -568,7 +583,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "一念之差",
                 "maps" => [["map" => "大唐国境", "x" => 0, "y" => 0]],
-                "description" => "需要完成【兔子成长史】成就，长安城乐艺坊剧院老板附近有几率触发，当前窗口说话无弹窗", "times" => 0, "group" => "",
+                "description" => "需要完成【兔子成长史】成就，并在当天抓捕三名通缉犯触发。如果当天不触发，则下一天需要重新抓捕三名通缉犯。", "times" => 0, "group" => "",
             ],
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "药店疑案",
@@ -583,7 +598,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "侠客行",
                 "maps" => [["map" => "长安城擂台", "x" => 0, "y" => 0]],
-                "description" => "在擂台玩法被PK，获得胜利时有几率触发", "times" => 0, "group" => "",
+                "description" => "在擂台玩法被PK，使用擂台专用药，获得胜利时有几率触发", "times" => 0, "group" => "",
             ],
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "断线风筝",
@@ -608,7 +623,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "花仙契约",
                 "maps" => [["map" => "大唐国境", "x" => 26, "y" => 161]],
-                "description" => "当天与好友鲜花加友好大于99，送好友一朵雪莲或玫瑰", "times" => 0, "group" => "",
+                "description" => "当天与好友鲜花加友好大于99，不强制要求玫瑰或雪莲", "times" => 0, "group" => "",
             ],
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "鲲鹏之地·一",
@@ -623,7 +638,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "猪王崛起",
                 "maps" => [["map" => "长安城外", "x" => 23, "y" => 67]],
-                "description" => "", "times" => 0, "group" => "",
+                "description" => "需要完成【野猪图鉴】", "times" => 0, "group" => "",
             ],
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "京城密探",
@@ -653,7 +668,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "奇判",
                 "maps" => [["map" => "长安城", "x" => 264, "y" => 146]],
-                "description" => "需要完成【摆摊5000万】成就，成就触发没有对话框而是捡起地上类似生肖祝福的东西触发", "times" => 0, "group" => "",
+                "description" => "需要完成【豪商5000万】成就，成就触发没有对话框而是捡起地上类似生肖祝福的东西触发", "times" => 0, "group" => "",
             ],
             [
                 "official" => "正五品中丞", "level" => 80, "name" => "括苍山僧",
@@ -685,7 +700,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "从四品少监", "level" => 90, "name" => "稀世奇珍",
                 "maps" => [["map" => "傲来国", "x" => 71, "y" => 22]],
-                "description" => "押镖十次后傲来国商人卖10个旗包换50万信誉后选着不卖", "times" => 0, "group" => "",
+                "description" => "押镖十次后傲来国商人卖10个旗包换50万信誉后选择不卖", "times" => 0, "group" => "",
             ],
             [
                 "official" => "从四品少监", "level" => 90, "name" => "雏燕之死",
@@ -709,7 +724,7 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "从四品少监", "level" => 90, "name" => "临仙铸剑师",
-                "maps" => [["map" => "临仙镇", "x" => 110, "y" => 10]],
+                "maps" => [["map" => "临仙镇", "x" => 119, "y" => 14]],
                 "description" => "", "times" => 0, "group" => "",
             ],
             [
@@ -724,17 +739,17 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "从四品少监", "level" => 90, "name" => "灵兽学院",
-                "maps" => [["map" => "大唐境外", "x" => 43, "y" => 92]],
-                "description" => "此奇遇会重复触发", "times" => 0, "group" => "",
+                "maps" => [["map" => "大唐境外", "x" => 170, "y" => 105]],
+                "description" => "需要完成【灵兽学院】奇遇15次", "times" => 0, "group" => "",
             ],
             [
                 "official" => "从四品少监", "level" => 90, "name" => "学院护婴员",
                 "maps" => [],
-                "description" => "需要完成【灵兽学院】成就15次", "times" => 0, "group" => "",
+                "description" => "需要完成【灵兽学院】奇遇15次", "times" => 0, "group" => "",
             ],
             [
                 "official" => "从四品少监", "level" => 90, "name" => "抢修索桥",
-                "maps" => [["map" => "大唐境外", "x" => 122, "y" => 105]],
+                "maps" => [["map" => "大唐境外", "x" => 145, "y" => 69]],
                 "description" => "", "times" => 0, "group" => "",
             ],
             [
@@ -744,7 +759,7 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "从四品少监", "level" => 90, "name" => "及时雨",
-                "maps" => [["map" => "大唐国境", "x" => 94, "y" => 128]],
+                "maps" => [["map" => "长安城", "x" => 515, "y" => 217]],
                 "description" => "需要完成【军备之荒】成就15次", "times" => 0,  "group" => "",
             ],
             [
