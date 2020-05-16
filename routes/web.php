@@ -38,6 +38,9 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('npcs', 'NpcsController@index')->name('npcs.index');
     Route::get('npcs/{npc}', 'NpcsController@show')->name('npcs.show');
 
+    // 奇遇相关
+    Route::get('meetings', 'MeetingsController@index')->name('meetings.index');
+
     // 门派相关
     Route::get('maps', 'MapsController@index')->name('maps.index');
     Route::get('maps/{map}', 'MapsController@show')->name('maps.show');

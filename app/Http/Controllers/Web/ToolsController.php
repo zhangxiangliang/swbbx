@@ -51,7 +51,7 @@ class ToolsController extends Controller
             (object)['title' => '篝火派对', 'description' => '烧烤培训速成班', 'category' => '攻略', 'route' => route('barbecues.index')],
             (object)['title' => '江湖恩仇录', 'description' => '神武社交宝典', 'category' => '攻略', 'route' => route('npcs.index')],
             (object)['title' => '休闲钓鱼', 'description' => '欲与太公试比高', 'category' => '攻略', 'route' => route('fishes.index')],
-            (object)['title' => '奇遇秘籍', 'description' => '碧波仙子在招手', 'category' => '攻略', 'route' => ''],
+            (object)['title' => '奇遇秘籍', 'description' => '碧波仙子在招手', 'category' => '攻略', 'route' => route('meetings.index')],
 
             // 小工具
             (object)['title' => '打书模拟', 'description' => '我命由我不由天', 'category' => '小工具', 'route' => ''],
