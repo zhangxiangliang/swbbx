@@ -11,7 +11,7 @@
     @if($meeting->levelExperience->level > 0 || $meeting->official || count($meeting->maps))
     <div class="list-group-item">
       @if($meeting->levelExperience->level > 0)
-      <a href="{{route('experiences.level')}}" class="badge badge-success">
+      <a href="{{route('level-experiences.index')}}" class="badge badge-success">
         {{$meeting->levelExperience->level}} 级
       </a>
       @endif
