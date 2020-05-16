@@ -130,6 +130,9 @@ class DatabaseSeeder extends Seeder
         $this->call(TitlesSchoolSeeder::class);
         $this->call(TitlesOfficialSeeder::class);
 
+        // 奇遇相关
+        $this->call(MeetingsSeeder::class);
+
         // 科举题库
         $this->call(QuestionsChessSeeder::class);
         $this->call(QuestionsGameSeeder::class);
