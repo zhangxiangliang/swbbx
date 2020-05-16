@@ -10,6 +10,10 @@
       <a href="{{route('experiences.level')}}" class="badge badge-success">
         {{$meeting->levelExperience->level}} 级
       </a>
+      @else
+      <div class="badge badge-secondary">
+        暂无等级要求
+      </div>
       @endif
       @if($meeting->official)
       <a href="{{route('officials.index')}}" class="badge badge-success">
@@ -17,7 +21,7 @@
       </a>
       @else
       <div class="badge badge-secondary">
-        暂无等级要求
+        暂无官职要求
       </div>
       @endif
       @foreach($meeting->maps as $map)
