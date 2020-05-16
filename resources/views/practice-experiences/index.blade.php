@@ -9,7 +9,7 @@
     {{-- 搜索 --}}
     <div class="card mb-2">
       <div class="card-header bg-transparent">
-        <form action="{{ route('experiences.practice') }}" method="GET" accept-charset="UTF-8">
+        <form action="{{ route('practice-experiences.index') }}" method="GET" accept-charset="UTF-8">
           <div class="input-group">
             <input name="search" type="text" class="form-control" placeholder="输入需要查询的技能等级" aria-label=""
               value="{{request()->get('search', '')}}" aria-describedby="">
@@ -25,7 +25,7 @@
     @include('shared._404', ['items' => $practices])
 
     {{-- 内容 --}}
-    @include('experiences._practice-list', ['practices' => $practices])
+    @include('practice-experiences._list', ['practices' => $practices])
 
     {{-- 分页 --}}
     @if($practices->lastPage() > 1)
@@ -36,7 +36,7 @@
   </div>
 
   <div class="col-lg-3 col-md-3 sidebar mt-md-0 mt-sm-2">
-    @include('experiences._sidebar')
+    @include('practice-experiences._sidebar')
   </div>
 </div>
 
