@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-lg-9 col-md-9 topic-list">
     {{-- 操作相关 --}}
-    <form action="{{ route('experiences.computer') }}" method="GET" accept-charset="UTF-8">
+    <form action="{{ route('experiences.index') }}" method="GET" accept-charset="UTF-8">
       <div class="row mb-2">
         <div class="col-sm-12 col-md-6">
           <div class="card">
