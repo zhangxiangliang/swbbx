@@ -21,25 +21,6 @@ class ExperiencesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function level(Request $request)
-    {
-        $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
-
-        $query = LevelExperience::query();
-
-        foreach ($keywords as $keyword) {
-            $query->orWhere('level', 'like', '%'. $keyword . '%');
-        }
-
-        $levels = $query->paginate();
-        return view('experiences.level', compact('levels'));
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function skill(Request $request)
     {
         $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
