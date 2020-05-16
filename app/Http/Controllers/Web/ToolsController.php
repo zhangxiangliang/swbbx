@@ -28,7 +28,7 @@ class ToolsController extends Controller
             // 经验相关
             (object)['title' => '等级经验表', 'description' => '卡级升级不放过', 'category' => '经验相关', 'route' => route('level-experiences.index')],
             (object)['title' => '技能经验表', 'description' => '技能经验全掌握', 'category' => '经验相关', 'route' => route('experiences.skill')],
-            (object)['title' => '修炼经验表', 'description' => '修炼一样不落下', 'category' => '经验相关', 'route' => route('experiences.practice')],
+            (object)['title' => '修炼经验表', 'description' => '修炼一样不落下', 'category' => '经验相关', 'route' => route('practice-experiences.index')],
 
             // 称谓相关
             (object)['title' => '门派称谓', 'description' => '神武称谓大百科', 'category' => '称谓相关', 'route' => route('titles.index')],

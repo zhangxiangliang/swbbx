@@ -13,7 +13,7 @@ class ExperiencesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['level', 'computer', 'skill', 'practice']]);
+        $this->middleware('auth', ['except' => ['computer', 'skill']]);
     }
 
     /**
@@ -33,25 +33,6 @@ class ExperiencesController extends Controller
 
         $skills = $query->paginate();
         return view('experiences.skill', compact('skills'));
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function practice(Request $request)
-    {
-        $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
-
-        $query = PracticeExperience::query();
-
-        foreach ($keywords as $keyword) {
-            $query->orWhere('level', 'like', '%'. $keyword . '%');
-        }
-
-        $practices = $query->paginate();
-        return view('experiences.practice', compact('practices'));
     }
 
     /**

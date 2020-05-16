@@ -59,8 +59,8 @@ Route::group(['namespace' => 'Web'], function () {
 
     // 经验相关
     Route::get('level-experiences/index', 'LevelExperiencesController@index')->name('level-experiences.index');
+    Route::get('practice-experiences/index', 'PracticeExperiencesController@index')->name('practice-experiences.index');
     Route::get('experiences/skill', 'ExperiencesController@skill')->name('experiences.skill');
-    Route::get('experiences/practice', 'ExperiencesController@practice')->name('experiences.practice');
     Route::get('experiences/computer', 'ExperiencesController@computer')->name('experiences.computer');
 
     // 话题分类
