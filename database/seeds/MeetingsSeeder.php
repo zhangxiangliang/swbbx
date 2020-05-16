@@ -24,6 +24,16 @@ class MeetingsSeeder extends Seeder
                 "description" => "跑商状态下大唐国境野猪王附近有几率触发", "times" => 0, "group" => "绝版奇遇"
             ],
             [
+                "official" => "", "level" => 0, "name" => "余香盈袖",
+                "maps" => [],
+                "description" => "野外摘玫瑰后有概率触发", "times" => 0, "group" => "绝版奇遇"
+            ],
+            [
+                "official" => "", "level" => 0, "name" => "阴谋",
+                "maps" => [],
+                "description" => "", "times" => 0, "group" => "绝版奇遇"
+            ],
+            [
                 "official" => "", "level" => 0, "name" => "阴谋",
                 "maps" => [],
                 "description" => "", "times" => 0, "group" => "绝版奇遇"
@@ -31,7 +41,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "", "level" => 0, "name" => "以旧换新",
                 "maps" => [],
-                "description" => "一天进行三次护符必定触发", "times" => 0, "group" => "绝版奇遇"
+                "description" => "一天合成三次护符必定触发", "times" => 0, "group" => "绝版奇遇"
             ],
             [
                 "official" => "", "level" => 0, "name" => "连中三元",
@@ -96,7 +106,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "", "level" => 50, "name" => "微弱的嘉许",
                 "maps" => [["map" => "庭院", "x" => 0, "y" => 0]],
-                "description" => "要求子女带身上并从车夫回家时触发，父亲节触发几率增加", "times" => 0, "group" => ""
+                "description" => "要求子女带身上回家时触发，父亲节触发几率增加", "times" => 0, "group" => ""
             ],
 
             // 笑看春风系列
@@ -129,7 +139,7 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "", "level" => 0, "name" => "长安靡音",
-                "maps" => [["map" => "南海普陀", "x" => 114, "y" => 22], ["map" => "凌霄天宫", "x" => 50, "y" => 37], ["map" => "镇元五庄", "x" => 130, "y" => 50], ["map" => "东海龙宫", "x" => 107, "y" => 27]],
+                "maps" => [["map" => "南海普陀", "x" => 30, "y" => 14], ["map" => "凌霄天宫", "x" => 50, "y" => 37], ["map" => "镇元五庄", "x" => 135, "y" => 50], ["map" => "东海龙宫", "x" => 107, "y" => 27]],
                 "description" => "", "times" => 0, "group" => "蒿鼠奇遇系列",
             ],
             [
@@ -144,7 +154,7 @@ class MeetingsSeeder extends Seeder
             ],
             [
                 "official" => "", "level" => 0, "name" => "青河歌会",
-                "maps" => [["map" => "傲来国", "x" => 114, "y" => 22]],
+                "maps" => [["map" => "傲来国", "x" => 35, "y" => 76], ["map" => "临仙镇", "x" => 160, "y" => 73], ["map" => "青河镇", "x" => 117, "y" => 90], ["map" => "长安城", "x" => 101, "y" => 105]],
                 "description" => "需要完成【我为歌狂】奇遇", "times" => 0, "group" => "蒿鼠奇遇系列",
             ],
 

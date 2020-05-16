@@ -3,6 +3,9 @@
     <div class="list-group-item">
       <div class="d-flex align-items-center justify-content-between">
         <div>{{ $meeting->name }}</div>
+        <a href="#" class="badge badge-secondary">
+          标记
+        </a>
       </div>
     </div>
     @if($meeting->levelExperience->level > 0 || $meeting->official || count($meeting->maps))
