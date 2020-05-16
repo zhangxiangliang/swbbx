@@ -21,9 +21,9 @@
 
       <div id="group">
         <div class="accordion-header">
-          @if($map->teacher)
-          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#teacher">
-            导师信息 <span class="badge badge-light">1</span>
+          @if($map->meetings && count($map->meetings))
+          <button class="btn btn-primary mb-2" data-toggle="collapse" data-target="#meetings">
+            奇遇秘籍 <span class="badge badge-light">{{count($map->meetings)}}</span>
           </button>
           @endif
 
@@ -64,6 +64,13 @@
           @endif
         </div>
         <div class="accordion-group">
+          {{-- 导师信息 --}}
+          @if($map->meetings)
+          <div class="collapse" id="meetings" data-parent="#group">
+            @include('meetings._lists', ['meetings' => $map->meetings, 'masonry' => 'meetings'])
+          </div>
+          @endif
+
           {{-- 导师信息 --}}
           @if($map->teacher)
           <div class="collapse" id="teacher" data-parent="#group">

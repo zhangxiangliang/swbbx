@@ -21,7 +21,7 @@ class Map extends Model
 
     public function meetings()
     {
-        return $this->hasMany(Meeting::class);
+        return $this->belongsToMany(Meeting::class)->withPivot('x', 'y');
     }
 
     public function baseSkills()

@@ -42,6 +42,7 @@ class MapsController extends Controller
     {
         $map->load([
             'titles.npc', 'titles.map',
+            'meetings', 'meetings.maps', 'meetings.official', 'meetings.levelExperience',
             'teacher', 'npcs.favorites', 'npcs.friends', 'npcs.map',
             'baseSkills', 'mountSkills', 'flySkills', 'superSkills'
         ]);
