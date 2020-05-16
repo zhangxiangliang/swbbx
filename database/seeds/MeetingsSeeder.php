@@ -913,7 +913,6 @@ class MeetingsSeeder extends Seeder
             $item = $items[$meeting['name']];
 
             foreach($item['maps'] as $map) {
-                dump(['x' => $map['x'], 'y' => $map['y']]);
                 $meeting->maps()->attach(
                     $maps[$map['map']],
                     ['x' => $map['x'], 'y' => $map['y']]
