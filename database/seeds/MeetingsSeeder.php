@@ -410,7 +410,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "从三品刺史", "level" => 100, "name" => "神武逍遥游",
                 "maps" => [],
-                "description" => "需要完成【神武逍遥游】相关奇遇，奖励称谓三界奇侠", "times" => 0, "group" => "神武逍遥游系列",
+                "description" => "需要完成【神武逍遥游】相关奇遇，奖励称谓【三界奇侠】", "times" => 0, "group" => "神武逍遥游系列",
             ],
 
             // 走四方系列
