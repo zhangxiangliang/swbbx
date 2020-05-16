@@ -108,11 +108,16 @@ class MeetingsSeeder extends Seeder
                 "maps" => [["map" => "庭院", "x" => 0, "y" => 0]],
                 "description" => "要求子女带身上回家时触发，父亲节触发几率增加", "times" => 0, "group" => ""
             ],
+            [
+                "official" => "", "level" => 0, "name" => "善人",
+                "maps" => [["map" => "佛门", "x" => 69, "y" => 79]],
+                "description" => "需要完成【行善积德】成就", "times" => 0, "group" => ""
+            ],
 
             // 笑看春风系列
             [
                 "official" => "正六品都尉", "level" => 70, "name" => "忆春风",
-                "maps" => [["map" => "长安城", "x" => 289, "y" => 91]],
+                "maps" => [["map" => "长安城", "x" => 29, "y" => 21]],
                 "description" => "", "times" => 0, "group" => "笑看春风系列",
             ],
             [
@@ -123,12 +128,17 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正六品都尉", "level" => 70, "name" => "笑春风",
                 "maps" => [["map" => "长安城乐艺坊", "x" => 0, "y" => 0]],
-                "description" => "单数整点播放《神武笑春风》时，乐艺坊剧院老板触发，当前窗口说话无弹窗", "times" => 0, "group" => "笑看春风系列",
+                "description" => "单数整点播放舞台剧时，乐艺坊剧院老板触发，当前窗口说话无弹窗。播放时间列表: 11:00-11:10, 13:00-13:10, 15:00-15:10, 17:00-17:10, 19:00-19:10, 21:00-21:10", "times" => 0, "group" => "笑看春风系列",
             ],
             [
                 "official" => "正六品都尉", "level" => 70, "name" => "念春风",
                 "maps" => [["map" => "大唐境外", "x" => 220, "y" => 80]],
                 "description" => "", "times" => 0, "group" => "笑看春风系列",
+            ],
+            [
+                "official" => "正六品都尉", "level" => 70, "name" => "笑看春风",
+                "maps" => [["map" => "大唐境外", "x" => 220, "y" => 80]],
+                "description" => "需要完成【笑看春风】系列奇遇", "times" => 0, "group" => "笑看春风系列",
             ],
 
             // 蒿鼠奇遇系列
@@ -481,7 +491,7 @@ class MeetingsSeeder extends Seeder
             [
                 "official" => "正六品都尉", "level" => 70, "name" => "姊妹情深",
                 "maps" => [["map" => "青河镇", "x" => 14, "y" => 106]],
-                "description" => "青河镇周夫人附近有几率触发", "times" => 0, "group" => "",
+                "description" => "青河镇周夫人附近有几率触发，当前窗口说话无弹窗", "times" => 0, "group" => "",
             ],
             [
                 "official" => "正六品都尉", "level" => 70, "name" => "天上人间",
