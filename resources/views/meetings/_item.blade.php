@@ -5,24 +5,17 @@
         <div>{{ $meeting->name }}</div>
       </div>
     </div>
+    @if($meeting->levelExperience->level > 0 || $meeting->official || count($meeting->maps))
     <div class="list-group-item">
       @if($meeting->levelExperience->level > 0)
       <a href="{{route('experiences.level')}}" class="badge badge-success">
         {{$meeting->levelExperience->level}} 级
       </a>
-      @else
-      <div class="badge badge-secondary">
-        暂无等级要求
-      </div>
       @endif
       @if($meeting->official)
       <a href="{{route('officials.index')}}" class="badge badge-success">
         {{$meeting->official->name}}
       </a>
-      @else
-      <div class="badge badge-secondary">
-        暂无官职要求
-      </div>
       @endif
       @foreach($meeting->maps as $map)
       <a href="{{route('maps.show', [$map->id])}}" class="badge badge-success">{{ $map->name }}
@@ -30,6 +23,7 @@
       </a>
       @endforeach
     </div>
+    @endif
     @if($meeting->description)
     <div class="list-group-item">
       描述: {{ $meeting->description }}
