@@ -39,6 +39,28 @@ class MapsSeeder extends Seeder
             ["name" => "女儿国", "teacher_id" => 0, "intro" => "", "description" => ""],
             ["name" => "金銮殿", "teacher_id" => 0, "intro" => "", "description" => ""],
             ["name" => "庭院", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "大唐国境", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "大雁塔一层", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "大唐境外", "teacher_id" => 0, "intro" => "", "description" => ""],
+
+            // 次级地图
+            ["name" => "长安城乐艺坊", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "长安城驿站", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "长安城金悦院", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "长安城药店", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "长安城擂台", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "长安城外", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "临仙镇药店", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "青河镇外", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "乌斯藏", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "花果山", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "水帘洞", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "北冥", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "昆仑山", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "神弃平原", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "仙临镇", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "寒冰宫一层", "teacher_id" => 0, "intro" => "", "description" => ""],
+            ["name" => "东海迷宫", "teacher_id" => 0, "intro" => "", "description" => ""],
         ];
 
         Map::insert(collect($items)->map(function ($item) {
