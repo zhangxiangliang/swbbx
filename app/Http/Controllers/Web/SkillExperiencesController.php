@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
-use App\Models\PracticeExperience;
+use App\Models\SkillExperience;
+use App\Http\Requests\ExperienceRequest;
 
-class PracticeExperiencesController extends Controller
+class SkillExperiencesController extends Controller
 {
     public function __construct()
     {
@@ -15,19 +16,19 @@ class PracticeExperiencesController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responseå
      */
     public function index(Request $request)
     {
         $keywords =  $request->get('search', '') === '' ? [] : explode(' ', $request->search);
 
-        $query = PracticeExperience::query();
+        $query = SkillExperience::query();
 
         foreach ($keywords as $keyword) {
             $query->orWhere('level', 'like', '%'. $keyword . '%');
         }
 
-        $practices = $query->paginate();
-        return view('practice-experiences.index', compact('practices'));
+        $skills = $query->paginate();
+        return view('skill-experiences.index', compact('skills'));
     }
 }

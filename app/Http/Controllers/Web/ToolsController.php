@@ -27,7 +27,7 @@ class ToolsController extends Controller
 
             // 经验相关
             (object)['title' => '等级经验表', 'description' => '卡级升级不放过', 'category' => '经验相关', 'route' => route('level-experiences.index')],
-            (object)['title' => '技能经验表', 'description' => '技能经验全掌握', 'category' => '经验相关', 'route' => route('experiences.skill')],
+            (object)['title' => '技能经验表', 'description' => '技能经验全掌握', 'category' => '经验相关', 'route' => route('skill-experiences.index')],
             (object)['title' => '修炼经验表', 'description' => '修炼一样不落下', 'category' => '经验相关', 'route' => route('practice-experiences.index')],
 
             // 称谓相关
@@ -41,7 +41,7 @@ class ToolsController extends Controller
             (object)['title' => '变身卡图鉴', 'description' => '坐骑技能与展示', 'category' => '宠物相关', 'route' => ''],
 
             // 计算器
-            (object)['title' => '经验计算器', 'description' => '卡级突破不落下', 'category' => '计算器', 'route' => route('experiences.computer')],
+            (object)['title' => '经验计算器', 'description' => '卡级突破不落下', 'category' => '计算器', 'route' => route('experiences.index')],
             (object)['title' => '元宵计算器', 'description' => '元宵颗颗不浪费', 'category' => '计算器', 'route' => ''],
             (object)['title' => '属性计算器', 'description' => '宠物属性轻松算', 'category' => '计算器', 'route' => ''],
             (object)['title' => '修炼计算器', 'description' => '羽化登仙有你我', 'category' => '计算器', 'route' => ''],

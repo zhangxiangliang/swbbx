@@ -4,10 +4,6 @@ namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
 use App\Models\LevelExperience;
-use App\Models\SkillExperience;
-use App\Models\PracticeExperience;
-use App\Http\Requests\ExperienceRequest;
-use Illuminate\Support\Facades\Validator;
 
 class LevelExperiencesController extends Controller
 {
