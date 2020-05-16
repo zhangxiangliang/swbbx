@@ -19,6 +19,11 @@ class Map extends Model
         return $this->hasMany(Title::class);
     }
 
+    public function meetings()
+    {
+        return $this->hasMany(Meeting::class);
+    }
+
     public function baseSkills()
     {
         return $this->hasMany(Skill::class)->where('skills.type', 'normal');
