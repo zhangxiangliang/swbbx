@@ -3151,11 +3151,6 @@ class QuestionsHistorySeeder extends Seeder
             ],
             [
                 "category" => "历史",
-                "question" => "康熙是清朝的第几任皇帝？",
-                "answer" => "康熙"
-            ],
-            [
-                "category" => "历史",
                 "question" => "唐朝是谁建立的？",
                 "answer" => "李渊"
             ],
@@ -3191,7 +3186,7 @@ class QuestionsHistorySeeder extends Seeder
             ],
             [
                 "category" => "历史",
-                "question" => "康熙是清朝的第几位皇帝？",
+                "question" => "康熙是清朝的第几任皇帝？",
                 "answer" => "第四位"
             ],
             [
