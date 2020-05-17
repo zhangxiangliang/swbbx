@@ -128,3 +128,8 @@ p {
     background-color: #d15b47 !important;
   }
 }
+
+// 站长之家
+a[title=站长统计] {
+  display: none;
+}
