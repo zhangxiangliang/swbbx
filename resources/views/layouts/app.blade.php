@@ -42,16 +42,14 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
-  <script>
-    if (("standalone" in window.navigator) && window.navigator.standalone) {
-      $('a').click(function (event) {
-        event.preventDefault();
-        document.location.href = event.target.href;
-      });
-    }
+  @yield('scripts')
+
+  <script type="text/javascript">
+    document.write(unescape(
+      "%3Cspan style='display:none;' id='cnzz_stat_icon_1278911242'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1278911242' type='text/javascript'%3E%3C/script%3E"
+    ));
 
   </script>
-  @yield('scripts')
 </body>
 
 </html>
