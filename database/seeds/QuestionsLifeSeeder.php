@@ -1192,7 +1192,7 @@ class QuestionsLifeSeeder extends Seeder
             [
                 "category" => "生活",
                 "question" => "奥运会上的马拉松比赛的起源与什么有关？",
-                "answer" => "战争"
+                "answer" => "起源马拉松战役，为了纪念报捷报的士兵而设立的比赛项目"
             ],
             [
                 "category" => "生活",
