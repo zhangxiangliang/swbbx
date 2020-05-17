@@ -974,6 +974,16 @@ class QuestionsGeographySeeder extends Seeder
                 "question" => "开平碉楼位于我国哪个省？",
                 "answer" => "广东省"
             ],
+            [
+                "category" => "地理",
+                "question" => "太阳系中最美的星球是哪个？",
+                "answer" => "土星"
+            ],
+            [
+                "category" => "地理",
+                "question" => "火星上最高的山峰是哪座？",
+                "answer" => "奥林帕斯山"
+            ],
         ];
 
         $questions = collect($questions)->map(function ($item) {

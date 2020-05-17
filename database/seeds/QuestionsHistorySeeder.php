@@ -3249,6 +3249,11 @@ class QuestionsHistorySeeder extends Seeder
                 "question" => "江东小霸王是谁的称号？",
                 "answer" => "孙策"
             ],
+            [
+                "category" => "历史",
+                "question" => "思想者又名沉思者，请问该雕塑的作者是？",
+                "answer" => "法国雕塑家奥古斯特·罗丹"
+            ],
         ];
 
         $questions = collect($questions)->map(function ($item) {

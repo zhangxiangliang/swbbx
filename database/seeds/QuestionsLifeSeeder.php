@@ -3427,7 +3427,7 @@ class QuestionsLifeSeeder extends Seeder
             [
                 "category" => "生活",
                 "question" => "当你要通过一段湿滑独木桥时，以下哪种方式是最安全有效的？",
-                "answer" => "身体倒挂，手脚并用的爬过去"
+                "answer" => "骑跨在桥上，缓慢挪动过去"
             ],
             [
                 "category" => "生活",
@@ -3699,6 +3699,18 @@ class QuestionsLifeSeeder extends Seeder
                 "question" => "火星的直径大还是地球的直径大？",
                 "answer" => "地球"
             ],
+            [
+                "category" => "生活",
+                "question" => "传统使用的农历，在每月的最后一天不见月光，请问这天又被称为什么？",
+                "answer" => "晦日"
+            ],
+            [
+                "category" => "生活",
+                "question" => "成年人大概有多少牙齿？",
+                "answer" => "32"
+            ],
+
+
         ];
 
         $questions = collect($questions)->map(function ($item) {

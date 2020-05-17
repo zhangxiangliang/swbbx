@@ -2919,6 +2919,16 @@ class QuestionsLiteratureSeeder extends Seeder
                 "question" => "《西游记》中，玉帝一开始封孙悟空为什么官职？",
                 "answer" => "弼马温"
             ],
+            [
+                "category" => "文学",
+                "question" => "《百家姓》是一本关于汉姓的书，该书成于哪一年？",
+                "answer" => "北宋初"
+            ],
+            [
+                "category" => "文学",
+                "question" => "京剧中，饰演性格活泼、开朗的青年女性的应是？",
+                "answer" => "花旦"
+            ],
         ];
 
         $questions = collect($questions)->map(function ($item) {

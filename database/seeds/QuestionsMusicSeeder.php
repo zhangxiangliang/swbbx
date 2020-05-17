@@ -229,6 +229,11 @@ class QuestionsMusicSeeder extends Seeder
                 "question" => "古代的五音“宫商角徵羽”相当于现在的七个音调中的哪五个？",
                 "answer" => "哆唻咪索啦"
             ],
+            [
+                "category" => "乐理",
+                "question" => "请问钢琴有多少个键？",
+                "answer" => "88"
+            ],
         ];
 
         $questions = collect($questions)->map(function ($item) {

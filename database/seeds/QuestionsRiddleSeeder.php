@@ -1781,11 +1781,6 @@ class QuestionsRiddleSeeder extends Seeder
             ],
             [
                 "category" => "猜谜",
-                "question" => "小时能吃味道鲜，老是能用有人砍，虽说不是刚和铁，浑身骨节压不湾。(打一物)",
-                "answer" => "竹子"
-            ],
-            [
-                "category" => "猜谜",
                 "question" => "在仰卧起坐、游泳、俯卧撑几项目当中，对小乌龟最具挑战性的运动是？",
                 "answer" => "仰卧起坐"
             ],
